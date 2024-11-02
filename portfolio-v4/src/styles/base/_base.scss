@@ -1,9 +1,11 @@
+@use "base/variables";
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
-    background-color: $color-bg;
-    font-family: $font-stack;
-    color: $color-text;
+    background-color: variables.$color-bg;
+    font-family: variables.$font-stack;
+    color: variables.$color-text;
 }

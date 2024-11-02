@@ -1,5 +1,7 @@
+@use "base/variables";
+
 footer {
-    background-color: $color-secondary;
+    background-color: variables.$color-secondary;
     min-height: 300px;
     border-radius: 20px 20px 0 0;
 
@@ -15,7 +17,7 @@ footer {
 
             .logo-container {
                 .socials {
-                    border-top: 1px solid $color-gray;
+                    border-top: 1px solid variables.$color-gray;
                     padding-top: 20px;
                     display: flex;
                     justify-content: flex-end;
@@ -30,7 +32,7 @@ footer {
 
     .credits {
         grid-column: 1/-1;
-        border-top: 1px solid $color-gray;
+        border-top: 1px solid variables.$color-gray;
         
         .content-wrapper {
             display: flex;
