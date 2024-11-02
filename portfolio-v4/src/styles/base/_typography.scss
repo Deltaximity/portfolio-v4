@@ -1,0 +1,50 @@
+body {
+    font-family: $font-text;
+    color: $color-text;
+}
+
+h1, h2, h3, h4, p, a, div, span {
+    color: $color-text;
+}
+
+h1, .title {
+    font-family: $font-display;
+    text-transform: uppercase;
+    font-size: 144px;
+    margin: 0;
+    line-height: 1;
+}
+
+h2, .h1 {
+    font-family: $font-display;
+    text-transform: uppercase;
+    font-size: 96px;
+    margin: 0;
+    line-height: 1;
+}
+
+h3, .h2 {
+    font-family: $font-text;
+    font-size: 32px;
+}
+
+h4, .h3 {
+    font-family: $font-display;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.subheading {
+    font-family: $font-text;
+    font-size: 20px;
+    margin: 0;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}

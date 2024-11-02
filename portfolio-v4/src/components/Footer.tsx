@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Linkedin, Twitter, Instagram, Youtube } from 'lucide-react';
+import { Linkedin, Github, Instagram, Youtube } from 'lucide-react';
 import { navLinks } from "./navLinks";
+import { Heart } from 'lucide-react';
 
 export default function Footer() {
     return (
@@ -18,19 +19,19 @@ export default function Footer() {
                         />
                         <div className="socials">
                             <Linkedin />
-                            <Twitter />
                             <Instagram />
                             <Youtube />
+                            <Github />
                         </div>
                     </div>
                     <div className="links">
-                        <h3>Pages</h3>
+                        <h4>Pages</h4>
                         {navLinks.map((item) => (
                             <Link key={item.href} href={item.href}><p>{item.label}</p></Link>
                         ))}
                     </div>
                     <div className="links">
-                        <h3>Recent</h3>
+                        <h4>Links</h4>
                         <p>link</p>
                         <p>link</p>
                         <p>link</p>
@@ -39,7 +40,7 @@ export default function Footer() {
             </div>
             <div className="credits">
                 <div className="content-wrapper">
-                    <p>Made by DELTA</p>
+                    <p>Made with <Heart size={16} /> by Hasan Ali</p>
                     <p>© Deltaximity - All rights reserved</p>
                 </div>
             </div>

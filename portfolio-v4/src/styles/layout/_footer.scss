@@ -2,6 +2,7 @@ footer {
     background-color: $color-secondary;
     min-height: 300px;
     border-radius: 20px 20px 0 0;
+    margin-top: $x4;
 
     .container {
         grid-column: 2/-2;

@@ -26,7 +26,7 @@ export default function Navbar() {
             </div>
             <div className='links'>
                 {navLinks.map((item) => (
-                    <Link key={item.href} href={item.href} className={pathname === item.href ? 'active' : ''}>{item.label}</Link>
+                    <Link key={item.href} href={item.href} className={`${pathname === item.href ? 'active' : ''} ${item.href === '/contact' ? 'secondary-button' : ''}`}>{item.label}</Link>
                 ))}
             </div>
         </nav>
