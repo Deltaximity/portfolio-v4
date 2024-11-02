@@ -3,7 +3,7 @@ import React from 'react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/navbar';
 import '../styles/globals.scss';
-import { Syne, Inter } from '@next/font/google';
+import { Syne, Inter } from "next/font/google";
 
 // Configure each font separately
 const syne = Syne({
