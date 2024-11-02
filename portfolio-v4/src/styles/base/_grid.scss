@@ -1,0 +1,21 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0 26px;
+    margin: 0 95px;
+
+    & > * {
+        grid-column: 1/-1;
+    }
+}
+
+nav {
+    grid-column: 1/-1;
+}
+
+footer {
+    display: inherit;
+    grid-template-columns: inherit;
+    grid-template-rows: 1fr 50px;
+    gap: inherit;
+}
