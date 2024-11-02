@@ -1,11 +1,11 @@
-@use 'base/variables';
-@use 'base/typography';
-@use 'base/base';
-@use 'base/grid';
+@import 'base/variables';
+@import 'base/typography';
+@import 'base/base';
+@import 'base/grid';
 
-@use 'layout/nav';
-@use 'layout/header';
-@use 'layout/footer';
+@import 'layout/nav';
+@import 'layout/header';
+@import 'layout/footer';
 
-@use 'components/modals';
-@use 'components/buttons';
+@import 'components/modals';
+@import 'components/buttons';
