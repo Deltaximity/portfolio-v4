@@ -10,7 +10,17 @@ nav {
         align-items: center;
 
         a {
-            margin-left: 52px;
+            margin-left: 16px;
+            border-radius: $radius-small;
+            color: $color-gray;
+
+            &:not(:last-child) {
+                padding: 12px 26px;
+            }
+
+            &.active, &:last-child, &:hover {
+                color: $color-text;
+            }
         }
     }
 }

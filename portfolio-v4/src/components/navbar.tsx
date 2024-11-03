@@ -6,13 +6,18 @@ import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { navLinks } from '@/components/navLinks';
 import { Menu, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Navbar() {
     const pathname = usePathname();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <nav>
+        <motion.nav
+            initial={{ opacity: 0.1 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: .3 }}
+            >
             <div>
                 <Link href="/">
                     <Image 
@@ -29,6 +34,6 @@ export default function Navbar() {
                     <Link key={item.href} href={item.href} className={`${pathname === item.href ? 'active' : ''} ${item.href === '/contact' ? 'secondary-button' : ''}`}>{item.label}</Link>
                 ))}
             </div>
-        </nav>
+        </motion.nav>
     )
 }

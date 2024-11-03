@@ -39,8 +39,8 @@ export default function Footer() {
                 </div>
             </div>
             <div className="credits">
-                <div className="content-wrapper">
-                    <p>Made with <Heart size={16} /> by Hasan Ali</p>
+                <div className="content-wrapper fineprint">
+                    <p>Made with <Heart size={14} /> by Hasan Ali</p>
                     <p>© Deltaximity - All rights reserved</p>
                 </div>
             </div>

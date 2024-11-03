@@ -9,11 +9,24 @@ $color-bg: #FDFBF5;
 $font-display: 'Syne', sans-serif;
 $font-text: 'Inter', sans-serif;
 
+// --------- FONT SIZE ---------
+$fontsize-title: 144px;
+$fontsize-h1: 96px;
+$fontsize-h2: 32px;
+$fontsize-h3: 22px;
+$fontsize-subheading: 20px;
+$fontsize-fineprint: 14px;
+
 // ---------- SPACING ----------
 $x1: 16px;
 $x2: 32px;
 $x3: 48px;
 $x4: 64px;
+
+$radius-small: 5px;
+$radius-big: 20px;
+
+$grid-gap: 26px;
 
 // ---------- MIXINS ----------
 @mixin primary-button {
@@ -21,6 +34,7 @@ $x4: 64px;
     border: 2px solid $color-text;
     padding: 10px 26px;
     border-radius: 5px;
+    text-align: center;
 
     &:hover {
         background-color: $color-secondary;
@@ -36,6 +50,7 @@ $x4: 64px;
     border: 2px solid $color-text;
     padding: 10px 26px;
     border-radius: 5px;
+    text-align: center;
 
     &:hover {
         background-color: $color-secondary;
