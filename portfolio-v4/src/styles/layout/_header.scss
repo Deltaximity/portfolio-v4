@@ -1,6 +1,5 @@
 header {
     position: relative;
-    height: 600px;
 }
 
 .main-hero {
@@ -8,8 +7,12 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: calc(90vh - 100px);
 
-    h1 {margin: 0;}
+    h1 {
+        margin: 0;
+        text-align: center;
+    }
 
     .hero-lambda {
         position: absolute;
@@ -19,5 +22,69 @@ header {
         z-index: -1;
         pointer-events: none;
         user-select: none;
+    }
+}
+
+.blog-header {
+    height: 450px;
+    // background-color: $color-primary;
+    border-radius: $radius-big;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    h1 {
+        margin: 0;
+        text-align: center;
+    }
+
+    &::before {
+        content: '';
+        background: url("../../../public/assets/img/noise.png") repeat,
+            conic-gradient($color-gray 40%, $color-primary, $color-secondary, $color-bg);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        bottom: 50%;
+        transform: scale(2);
+        mix-blend-mode: multiply;
+        image-rendering: pixelated;
+    }
+
+    .mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-bg;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+            border-bottom-left-radius: $radius-big;
+            box-shadow: 0 20px 0 $color-bg;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+            border-bottom-right-radius: $radius-big;
+            box-shadow: 0 20px 0 $color-bg;
+        }
     }
 }

@@ -26,6 +26,13 @@ footer {
                     }
                 }
             }
+
+            .links-container {
+                display: flex;
+                .links {
+                    margin-left: calc($grid-gap * 4);
+                }
+            }
         }
     }
 

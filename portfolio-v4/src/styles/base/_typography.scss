@@ -3,7 +3,7 @@ body {
     color: $color-text;
 }
 
-h1, h2, h3, h4, p, a, div, span {
+h1, h2, h3, h4, p, a, div, span, p svg {
     color: $color-text;
 }
 
@@ -26,6 +26,7 @@ h2, .h1 {
 
 h3, .h2 {
     font-family: $font-text;
+    text-transform: none;
     font-size: $fontsize-h2;
     margin: $grid-gap 0 calc($grid-gap/2) 0;
 }
@@ -57,4 +58,13 @@ a {
     &:hover {
         text-decoration: underline;
     }
+}
+
+p a {
+    text-decoration: underline;
+    // color: $color-gray;
+}
+
+p svg {
+    transform: translate(0, 10%);
 }
