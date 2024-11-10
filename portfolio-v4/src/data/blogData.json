@@ -1,0 +1,14 @@
+[
+    {
+        "slug": "my-first-post",
+        "title": "My First Post",
+        "content": "# Welcome to My Blog\nThis is my first post written in Markdown.",
+        "tags": ["Case Study", "Project"]
+    },
+    {
+        "slug": "another-post",
+        "title": "Another Post",
+        "content": "## This is another post\nMarkdown content goes here.",
+        "tags": ["Case Study", "Project"]
+    }
+]
