@@ -29,6 +29,7 @@ h3, .h2 {
     text-transform: none;
     font-size: $fontsize-h2;
     margin: $grid-gap 0 calc($grid-gap/2) 0;
+    font-weight: 500;
 }
 
 h4, .h3 {
@@ -36,6 +37,7 @@ h4, .h3 {
     text-transform: uppercase;
     font-size: $fontsize-h3;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .subheading {
