@@ -24,3 +24,24 @@ nav {
         }
     }
 }
+
+nav[aria-label="breadcrumbs"] {
+    height: 40px;
+    position: absolute;
+    z-index: 1;
+
+    ol {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        li {
+            &::before {
+                content: '>';
+                padding: 0 8px;
+                color: $color-gray;
+            }
+        }
+    }
+}
