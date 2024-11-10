@@ -1,14 +1,17 @@
-import Link from "next/link"
+import Link from "next/link";
 
 export default function BlogPage() {
     const blogPosts = [
         { slug: 'my-first-post', title: 'My First Post'},
-        { slug: 'another-post', title: 'Another Post'}
+        { slug: 'another-post', title: 'Another Post'},
+        { slug: 'a-third-post', title: 'A Third Post'}
     ]
     
     return (
         <div>
-            <h1>Hello, Blog Page!</h1>
+            <section className="blogs-list">
+                <h1 className="h1">All Blogs</h1>
+            </section>
             <ul>
                 {blogPosts.map((post) => (
                     <li key={post.slug}>

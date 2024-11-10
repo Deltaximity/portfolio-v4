@@ -33,7 +33,7 @@ export default function HomePage() {
             <div className="content">
               <div>
                 <h3>Hotspot App</h3>
-                <p>My most ambitious project to date. Designed from the ground up. A PWA app that contributes to the technological advancement of <Link href="https://hotspot.kau.se/">Hotspot</Link>. Annually helping over 8000 students connect with employers at the Hotspot job fair.</p>
+                <p>My most ambitious project to date. Designed from the ground up. A PWA app that contributes to the technological advancement of <Link href="https://hotspot.kau.se/">Hotspot</Link> under <Link href="https://www.kau.se/">Karlstad University</Link>. Annually helping over 8000 students connect with employers at the Hotspot job fair.</p>
               </div>
               <div className="links">
                 <Link href="/" className="secondary-button">View project</Link>
