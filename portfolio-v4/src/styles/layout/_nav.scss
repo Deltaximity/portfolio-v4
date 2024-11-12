@@ -1,4 +1,4 @@
-nav {
+nav[aria-label="main-navigation"] {
     height: 100px;
     width: 100%;
     display: flex;
@@ -26,17 +26,25 @@ nav {
 }
 
 nav[aria-label="breadcrumbs"] {
-    height: 40px;
-    position: absolute;
+    height: 35px;
+    margin-bottom: -35px;
     z-index: 1;
-
+    justify-content: space-between;
+    align-items: center;
+    
     ol {
         list-style: none;
         display: flex;
         margin: 0;
         padding: 0;
-
+        grid-column: 1/-1;
+        
         li {
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-wrap: nowrap;
+            
             &::before {
                 content: '>';
                 padding: 0 8px;
