@@ -50,6 +50,12 @@ h4, .h3 {
     font-size: $fontsize-fineprint;
 }
 
+.meta {
+    font-weight: 700;
+    line-height: 2;
+    color: $color-gray;
+}
+
 p {
     line-height: 1.5;
 }
