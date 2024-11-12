@@ -3,14 +3,25 @@
 import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import blogData from '../../../data/blogData.json';
-import { FileWarning, LoaderCircle } from 'lucide-react';
+import { SaveOff, LoaderCircle } from 'lucide-react';
 
 export default function BlogPostPage() {
     const { slug } = useParams();
     if (!slug) return <p className='info-message'><LoaderCircle size={36} />Loading...</p>;
 
     const blogPost = blogData.find((post) => post.slug === slug);
-    if (!blogPost) return <p className='info-message h2'><FileWarning size={36} />Blog post not found</p>;
+    if (!blogPost) return (
+        <p className='info-message h2'>
+            <motion.span 
+                initial={{ opacity: 1 }}
+                animate={{ opacity: [1, 0] }}
+                transition={{ duration: 1, repeat: Infinity, ease: [1, 0, 0, 1] }}
+            >
+                <SaveOff size={36} />
+            </motion.span>
+            Blog post not found
+        </p>
+    );
 
     return (
         <>
