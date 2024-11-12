@@ -14,6 +14,7 @@ export default function Navbar() {
 
     return (
         <motion.nav
+            aria-label="main-navigation"
             initial={{ opacity: 0.1 }}
             animate={{ opacity: 1 }}
             transition={{ duration: .3 }}
@@ -23,9 +24,9 @@ export default function Navbar() {
                     <Image 
                         src="/assets/img/Logotype.png"
                         alt="Logo"
-                        width={200}
+                        width={250}
                         height={0}
-                        style={{objectFit: 'contain', height: '100%', width: 'auto'}}
+                        style={{objectFit: 'contain', height: '100%'}}
                     />
                 </Link>
             </div>

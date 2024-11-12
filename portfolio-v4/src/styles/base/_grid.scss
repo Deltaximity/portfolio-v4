@@ -10,7 +10,7 @@ body {
     }
 }
 
-nav {
+nav[aria-label="main-navigation"] {
     grid-column: 1/-1;
 }
 
