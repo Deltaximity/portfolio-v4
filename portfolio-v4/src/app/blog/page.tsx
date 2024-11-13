@@ -1,18 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import blogData from '@/data/blogData.json';
 
 export default function BlogPage() {
-    const blogPosts = [
-        { slug: 'my-first-post', title: 'My First Post'},
-        { slug: 'another-post', title: 'Another Post'},
-        { slug: 'post-3', title: 'A Third Post'},
-        { slug: 'post-4', title: 'A Third Post'},
-        { slug: 'post-5', title: 'A Third Post'},
-        { slug: 'post-6', title: 'A Third Post'},
-        { slug: 'post-7', title: 'A Third Post'}
-    ];
-
     const listVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -34,7 +25,7 @@ export default function BlogPage() {
             <section className="blogs-list">
                 <h1 className="h1">All Blogs</h1>
                 <ul className="cards">
-                    {blogPosts.map((post) => (
+                    {blogData.map((post) => (
                         <li key={post.slug} className="card">
                             <Link href={`/blog/${post.slug}`}>
                                 <div className="image-container">
@@ -49,7 +40,7 @@ export default function BlogPage() {
                                 <div className="content">
                                     <span className="meta fineprint">Case Study, Project — 2024</span>
                                     <h2 className="h3">{post.title}</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, delectus.</p>
+                                    <p>{post.description}</p>
                                 </div>
                             </Link>
                         </li>
