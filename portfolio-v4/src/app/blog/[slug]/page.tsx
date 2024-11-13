@@ -2,8 +2,9 @@
 
 import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
-import blogData from '../../../data/blogData.json';
+import blogData from '@/data/blogData.json';
 import { SaveOff, LoaderCircle } from 'lucide-react';
+import MarkdownRenderer from '@/components/MarkdownRenderer';
 
 export default function BlogPostPage() {
     const { slug } = useParams();
@@ -45,10 +46,7 @@ export default function BlogPostPage() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: .3, delay: .4 }}
             >
-                <h2 className='h2'>First heading of the article</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nesciunt quam eaque natus et laboriosam, quidem unde amet nostrum vitae, voluptatum doloremque explicabo. Voluptatum, accusantium itaque assumenda consequuntur illo, incidunt labore sequi iure magnam mollitia repudiandae veniam sit eveniet, nemo aliquid consectetur hic fugiat placeat velit! Ratione assumenda doloremque non.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nesciunt quam eaque natus et laboriosam, quidem unde amet nostrum vitae, voluptatum doloremque explicabo. Voluptatum, accusantium itaque assumenda consequuntur illo, incidunt labore sequi iure magnam mollitia repudiandae veniam sit eveniet, nemo aliquid consectetur hic fugiat placeat velit! Ratione assumenda doloremque non.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nesciunt quam eaque natus et laboriosam, quidem unde amet nostrum vitae, voluptatum doloremque explicabo. Voluptatum, accusantium itaque assumenda consequuntur illo, incidunt labore sequi iure magnam mollitia repudiandae veniam sit eveniet, nemo aliquid consectetur hic fugiat placeat velit! Ratione assumenda doloremque non.</p>
+                <MarkdownRenderer markdownText={blogPost.content} />
             </motion.article>
         </>
     );
