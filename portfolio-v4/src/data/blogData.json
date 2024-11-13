@@ -2,29 +2,61 @@
     {
         "slug": "sample-post",
         "title": "Sample Post",
+        "image": "/assets/img/DSC00402.jpg",
+        "alt": "Bushy plant.",
         "description": "This is a sample post to test markdown support.",
-        "content": "# Heading 1\n## Heading 2\n### Heading 3\n**Bold text** and *italic text* with an [external link](https://example.com) and an [internal one](/)\n- List item 1\n- List item 2\n\n1. List item 1\n2. List item 2",
-        "tags": ["Case Study", "Project"]
+        "content": "# Heading 1\n## Heading 2\n### Heading 3\n**Bold text** and *italic text* with an [external link](https://example.com) and an [internal one](/).\n\nHere's an `inline code block`. Let's not forget ~~strikethrough~~ text.\n```javascript\n// this is a comment\nconst greeting = 'Hello, world!';\nconsole.log(greeting);\n```\n```css\nh2, .h1 {\n  font-family: $font-display;\n  text-transform: uppercase;\n  font-size: $fontsize-h1;\n  margin: calc($grid-gap*2) 0 $grid-gap 0;\n  line-height: 1;\n}\n```\n```html\n<html lang=\"en\">\n  <body>\n    <Navbar />\n    <main>{children}</main>\n    <Footer />\n  </body>\n</html>\n```\n- List item 1\n- List item 2\n1. List item 1\n2. List item 2\n* [ ] todo\n* [x] done\n> This is a block quote\n\n---\n\n![Dark plant leaves](/assets/img/DSC00402.jpg)", 
+        "category": "Test",
+        "date": "2024"
     },
     {
         "slug": "my-first-post",
         "title": "My First Post",
+        "image": "/assets/img/DSC00402.jpg",
+        "alt": "Bushy plant.",
         "description": "My first post to test how a real post looks like.",
         "content": "# Welcome to My Blog\nThis is my first post written in Markdown.\nLorem ipsum dolor sit amet consectetur adipisicing elit. Illo sapiente quibusdam nam quae vel est repudiandae eius tempora deserunt corrupti voluptatibus, animi enim nobis adipisci, fugiat, a vitae! Quis, omnis! Esse numquam eveniet iste itaque, quas sapiente dolore accusamus aliquam natus, consectetur dolor, officia saepe ducimus doloribus. Dolorem, natus ipsam?\n# This is a Second Heading\nLorem ipsum dolor sit amet consectetur adipisicing elit. Illo sapiente quibusdam nam quae vel est repudiandae eius tempora deserunt corrupti voluptatibus, animi enim nobis adipisci, fugiat, a vitae! Quis, omnis! Esse numquam eveniet iste itaque, quas sapiente dolore accusamus aliquam natus, consectetur dolor, officia saepe ducimus doloribus. Dolorem, natus ipsam?\nLorem ipsum dolor sit amet consectetur adipisicing elit. Illo sapiente quibusdam nam quae vel est repudiandae eius tempora deserunt corrupti voluptatibus, animi enim nobis adipisci, fugiat, a vitae! Quis, omnis! Esse numquam eveniet iste itaque, quas sapiente dolore accusamus aliquam natus, consectetur dolor, officia saepe ducimus doloribus. Dolorem, natus ipsam?",
-        "tags": ["Case Study", "Project"]
+        "category": "Test",
+        "date": "2024"
     },
     {
-        "slug": "another-post",
-        "title": "Another Post",
-        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molesiae, delectus.",
-        "content": "## This is another post\nMarkdown content goes here.",
-        "tags": ["Case Study", "Project"]
+        "slug": "hotspot-app",
+        "title": "Hotspot App",
+        "image": "/assets/img/mockup1.webp",
+        "alt": "Mockup of an iPhone 16 Pro featuring the Hotspot App.",
+        "description": "A PWA app that annually helps over 8000 students connect with employers at the Hotspot job fair.",
+        "content": "# This is another post\nMarkdown content goes here.",
+        "category": "Case Study, Project",
+        "date": "2024"
     },
     {
-        "slug": "a-third-post",
-        "title": "A Third Post",
-        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molesiae, delectus.",
-        "content": "## This is another post\nMarkdown content goes here.",
-        "tags": ["Case Study", "Project"]
+        "slug": "my-portfolio-website",
+        "title": "My Portfolio Website",
+        "image": "/assets/img/mockup3.webp",
+        "alt": "Mockup of a Macbook Pro featuring my website.",
+        "description": "Dive deeper into the history and thought process behind my portfolio website.",
+        "content": "# This is another post\nMarkdown content goes here.",
+        "category": "Project",
+        "date": "2024"
+    },
+    {
+        "slug": "temperature-sensor",
+        "title": "Temperature Sensor",
+        "image": "/assets/img/IMG_2887.webp",
+        "alt": "Bushy plant",
+        "description": "Making a temperature sensor with an Arduino R3 and 16x2 LCD screen.",
+        "content": "# This is another post\nMarkdown content goes here.",
+        "category": "Project",
+        "date": "2024"
+    },
+    {
+        "slug": "designing-an-efficient-setup",
+        "title": "Designing an Efficient Setup",
+        "image": "/assets/img/DSC01479.jpg",
+        "alt": "Bushy plant",
+        "description": "Dive deeper into behind the scenes of my workspace, and what makes it so special.",
+        "content": "# This is another post\nMarkdown content goes here.",
+        "category": "Project",
+        "date": "2024"
     }
 ]

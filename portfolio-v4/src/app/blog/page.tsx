@@ -30,15 +30,15 @@ export default function BlogPage() {
                             <Link href={`/blog/${post.slug}`}>
                                 <div className="image-container">
                                     <Image 
-                                        src="/assets/img/DSC00402.jpg" 
-                                        alt=""
+                                        src={post.image ? post.image : "/assets/img/DSC00402.jpg"}
+                                        alt={post.image ? post.alt : ""}
                                         fill
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 20vw"
                                         style={{ objectFit: "cover" }}
                                         />
                                 </div>
                                 <div className="content">
-                                    <span className="meta fineprint">Case Study, Project — 2024</span>
+                                    <span className="meta fineprint">{post.category} — {post.date}</span>
                                     <h2 className="h3">{post.title}</h2>
                                     <p>{post.description}</p>
                                 </div>

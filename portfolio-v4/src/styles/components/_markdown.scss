@@ -1,0 +1,86 @@
+.post-content {
+  p {
+    line-height: 1.8;
+  }
+}
+
+.post-image {
+  display: block;
+  position: relative;
+  height: 500px;
+  width: calc(100% + ($grid-gap*2));
+  transform: translateX(-$grid-gap);
+
+  img {
+    border-radius: $radius-small;
+  }
+}
+
+// Example for dark code blocks
+.code-block {
+  color: $color-bg;
+  background-color: $color-text;
+  border-radius: $radius-small;
+  font-size: $fontsize-fineprint;
+  overflow: auto;
+  padding: $grid-gap;
+}
+
+// Inline code styling
+.inline-code {
+  background-color: $color-bg;
+  padding: 2px 4px;
+  border: 1px solid $color-gray;
+  border-radius: 3px;
+  font-size: $fontsize-fineprint;
+}
+
+/* Comment and quote styling */
+.hljs-comment,
+.hljs-quote {
+  color: $color-gray;
+  font-style: italic;
+}
+
+/* Keywords and important syntax */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name {
+  color: $color-gray;
+}
+
+/* Literals, symbols, and variables */
+.hljs-literal,
+.hljs-symbol,
+.hljs-variable,
+.hljs-attr {
+  color: $color-secondary;
+}
+
+/* String values, titles, and sections */
+.hljs-string,
+.hljs-title,
+.hljs-section {
+  color: #98c379;
+}
+
+/* Numbers, booleans, and attributes */
+.hljs-attribute {
+  color: $color-gray;
+}
+
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-built_in,
+.hljs-number,
+.hljs-function,
+.hljs-title.function_ {
+  color: #e5c07b;
+}
+
+/* Class names and tags */
+.hljs-class .hljs-title,
+.hljs-type,
+.hljs-tag {
+  color: #e06c75;
+}
