@@ -35,6 +35,57 @@
   font-size: $fontsize-fineprint;
 }
 
+blockquote {
+  position: relative;
+  // background-color: $color-secondary;
+  margin: 0;
+  padding: 0 $grid-gap;
+  line-height: 1.5;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color: $color-gray;
+  }
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: $color-gray;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: $fontsize-body;
+
+  th {
+    background-color: $color-secondary;
+  }
+  
+  th, td {
+    border: 1px solid $color-gray;
+    padding: 10px;
+  }
+}
+
+.contains-task-list {
+  list-style: none;
+  padding-inline-start: 20px;
+
+  .task-list-item {
+    .checkbox {
+      display: none;
+    }
+  }
+}
+
+// --------------------------- HIGHLIGHT JS ---------------------------
 /* Comment and quote styling */
 .hljs-comment,
 .hljs-quote {
