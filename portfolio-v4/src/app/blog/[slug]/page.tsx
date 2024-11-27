@@ -21,7 +21,7 @@ interface Post {
 
 // src/app/blog/[slug]/page.tsx
 export async function generateStaticParams() {
-    const posts = await getPostMetadata(); // Add `await` here
+    const posts = await getPostMetadata();
     return posts.map((post) => ({
         slug: post.slug,
     }));
@@ -46,10 +46,8 @@ return {
 
 // src/app/blog/[slug]/page.tsx
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-    const post = await getPostBySlug(params.slug); // Add `await` here
-    if (!post) {
-        notFound();
-    }
+    const post = await getPostBySlug(params.slug);
+    if (!post) notFound();
 
     return (
         <>
@@ -63,28 +61,28 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                 </div>
             </aside>
             <div className="post-content" style={{ position: "relative" }}>
-            <ReactMarkdown
-                children={post.content}
-                remarkPlugins={[remarkGfm]}
-                rehypePlugins={[rehypeHighlight]}
-                components={{
-                h1: ({ node, ...props }) => (<h2 className='h2' {...props} />),
-                h2: ({ node, ...props }) => (<h3 className='h3' {...props} />),
-                h3: ({ node, ...props }) => (<h4 className='h4' {...props} />),
-                code: ({ node, ...props }) => (<code className='inline-code' {...props} />),
-                pre: ({ node, ...props }) => (<pre className='code-block' {...props} />),
-                img: ({ node, ...props }) => (
-                    <span className='post-image'>
-                    <Image
-                        src={props.src || ''}
-                        alt={props.alt || 'Markdown image'}
-                        fill
-                        style={{ objectFit: "cover" }}
-                    />
-                    </span>
-                ),
-                }}
-            />
+                <ReactMarkdown
+                    children={post.content}
+                    remarkPlugins={[remarkGfm]}
+                    rehypePlugins={[rehypeHighlight]}
+                    components={{
+                    h1: ({ node, ...props }) => (<h2 className='h2' {...props} />),
+                    h2: ({ node, ...props }) => (<h3 className='h3' {...props} />),
+                    h3: ({ node, ...props }) => (<h4 className='h4' {...props} />),
+                    code: ({ node, ...props }) => (<code className='inline-code' {...props} />),
+                    pre: ({ node, ...props }) => (<pre className='code-block' {...props} />),
+                    img: ({ node, ...props }) => (
+                        <span className='post-image'>
+                        <Image
+                            src={props.src || ''}
+                            alt={props.alt || 'Markdown image'}
+                            fill
+                            style={{ objectFit: "cover" }}
+                        />
+                        </span>
+                    ),
+                    }}
+                />
             </div>
         </article>
         </>
