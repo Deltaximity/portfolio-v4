@@ -13,27 +13,31 @@ date: "2024"
 
 # Background
 
-[Hotspot](https://hotspot.kau.se/) is an organization that arranges annual job fair events at [Karlstad University](https://www.kau.se/en). It was founded in 1998, and is Sweden's largest job fair organizer. During their first job fair, over 130 exhibitors participated. As of year 2024, Hotspot still attracts well over 130 companies from across the country, and over 8000 students visit the job fair annually.
+[Hotspot](https://hotspot.kau.se/) is an organization that arranges annual job fair events at [Karlstad University](https://www.kau.se/en). It was founded by students in 1998, and is Sweden's largest job fair organizer. During their first job fair, over 130 exhibitors participated. As of year 2024, Hotspot still attracts well over 130 companies from across the country, and over 8000 students visit the job fair annually.
 
-With the rise in demand and popularity, Hotspot needed to come up with more innovative ways to design their job fairs. Students were not satisfied with the event, claiming that they couldn't find the right companies, and that the navigation of the map/list of companies (provided upon visiting the event) was too confusing to use. This was also resource-intensive on Hotspot team's side, due to the planning and work involved in designing and printing all the documents. Additionally, companies complained about how their booths didn't get enough recognition due to the layout of the event itself. Naturally, those located farther away from the event, gained less recognition from students.
+With the rise in demand and popularity, Hotspot needed to come up with more innovative ways to design their job fairs. Students were not satisfied with the event, claiming that they couldn’t find the right companies and that the navigation of the map/list of companies (provided upon visiting the event) was too confusing to use. This was also resource-intensive on Hotspot team’s side, due to the planning and work involved in handling all the logistics. Furthermore, unauthorized students from outside the university were entering the event, exacerbating the issues. Additionally, companies complained about how their booths didn’t get enough recognition due to the layout of the event itself. Naturally, those located farther away from the event gained less recognition from students.
 
 To summarize, we see clear problems from three sides:
 | Hotspot | Students | Companies |
 |---------|----------|-----------|
-| Time-consuming to design and arrange documents | Confusing navigation using the printed map | Not getting enough recognition |
-| Printing is resource-intensive | No info about the companies | Not getting the right students |
+| Resource-intensive to handle all the logistics | Confusing navigation using the printed map | Not getting enough recognition |
+| Unauthorized access by students outside the university | No info about the companies | Not getting the right students |
 
-- The idea of digitalization has been prevalent.
-- Hotspot reached out with a proposal of making a "matchingmaking" solution for students and companies. 
-- I joined the Hotspot project team and was in charge of the planning, design and development of this proposed app.
+Hotspot needed a solution to address these concerns, so they reached out to students in the web development program with a proposal of coming up with a matchingmaking solution for students and companies. 
+
+I joined the Hotspot project team in 2023 during my university studies and was in charge of the planning and development of this proposed app. Together with a development team of three; two web developers (me included) and one UI/UX-designer.
 
 ---
 
-- Describe the specific problem or need that prompted the app’s development.
-- Include context about why this problem is relevant or challenging.
 - Highlight any relevant trends, data, or user research findings that show why this app would be valuable.
 
 # Objectives
+
+The Hotspot app is aimed to address the issues highlighted in the three categories above. The app's goals are:
+- Help students match with the right companies
+- 
+
+---
 
 - Define the goals of the app clearly. These can include:
   - Solving a specific user problem.
@@ -43,6 +47,18 @@ To summarize, we see clear problems from three sides:
 
 # Research and User Analysis
 
+| Industries | Roles |
+|------------|-------|
+| Economics and law | Employment |
+| Healthcare and social work | Trainee |
+| Engineering | Extra job |
+| IT | Thesis work |
+| Teacher training | Summer job |
+| Music, dance and culture | Internship |
+| Social sciences and humanities | Membership |
+
+---
+
 - Outline the research conducted to understand the user needs, including methods like surveys, interviews, or usability studies.
 - Discuss any personas developed or key insights uncovered about users’ goals, behaviors, pain points, or preferences.
 - Share any initial sketches, wireframes, or prototypes used to validate ideas with users.
@@ -50,6 +66,11 @@ To summarize, we see clear problems from three sides:
 # Design and Development Process
 
 ## Planning
+
+During the planning phase, we had to decide which frameworks to use.
+
+---
+
 Describe the initial planning and brainstorming process. Mention any frameworks or methodologies used, such as Agile or Lean UX.
 
 ## Design
@@ -59,8 +80,12 @@ Explain the design considerations, including user interface, user experience, an
 ## Development
 Talk about the technologies and tools used, such as your chosen programming languages, frameworks, and libraries.
 - Address any challenges encountered and how they were overcome.
-- Testing: Describe the testing phase, including usability testing, bug fixing, and performance optimization.
-- Launch: Outline the deployment process and any plans for monitoring user feedback and app performance.
+
+## Testing
+Describe the testing phase, including usability testing, bug fixing, and performance optimization.
+
+## Launch
+Outline the deployment process and any plans for monitoring user feedback and app performance.
 
 # Key Features and Functionalities
 
