@@ -1,11 +1,6 @@
-@use "base/variables";
-
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    background-color: variables.$color-bg;
-    font-family: variables.$font-stack;
-    color: variables.$color-text;
+    background-color: $color-bg;
 }

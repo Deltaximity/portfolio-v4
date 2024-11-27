@@ -2,8 +2,96 @@
 $color-primary: #FFBB98;
 $color-secondary: #F3EFE5;
 $color-gray: #77B1A3;
-$color-text: #000000;
+$color-text: #2D2D2D;
 $color-bg: #FDFBF5;
 
-// ---------- FONT ----------
-$font-stack: 'Roboto', sans-serif;
+// ----------- FONT -----------
+$font-display: 'Syne', sans-serif;
+$font-text: 'Inter', sans-serif;
+
+// --------- FONT SIZE ---------
+:root {
+    --dynamic-fontsize-title: 144px;
+    --dynamic-fontsize-h1: 96px;
+    --dynamic-fontsize-h2: 30px;
+    --dynamic-fontsize-h3: 22px;
+    --dynamic-fontsize-h4: 20px;
+    --dynamic-fontsize-subheading: 20px;
+    --dynamic-fontsize-body: 16px;
+    --dynamic-fontsize-fineprint: 14px;
+}
+
+$fontsize-title: var(--dynamic-fontsize-title);
+$fontsize-h1: var(--dynamic-fontsize-h1);
+$fontsize-h2: var(--dynamic-fontsize-h2);
+$fontsize-h3: var(--dynamic-fontsize-h3);
+$fontsize-h4: var(--dynamic-fontsize-h4);
+$fontsize-subheading: var(--dynamic-fontsize-subheading);
+$fontsize-body: var(--dynamic-fontsize-body);
+$fontsize-fineprint: var(--dynamic-fontsize-fineprint);
+
+// ---------- SPACING ----------
+$x1: 16px;
+$x2: 32px;
+$x3: 48px;
+$x4: 64px;
+
+$radius-small: 5px;
+$radius-big: 20px;
+
+$grid-gap: 26px;
+
+// ---------- MIXINS ----------
+@mixin primary-button {
+    background-color: $color-primary;
+    border: 2px solid $color-text;
+    padding: 10px 26px;
+    border-radius: 5px;
+    text-align: center;
+
+    &:hover {
+        background-color: $color-secondary;
+    }
+
+    &:active {
+        background-color: $color-gray;
+    }
+}
+
+@mixin secondary-button {
+    background-color: $color-bg;
+    border: 2px solid $color-text;
+    padding: 10px 26px;
+    border-radius: 5px;
+    text-align: center;
+
+    &:hover {
+        background-color: $color-secondary;
+    }
+
+    &:active {
+        background-color: $color-gray;
+    }
+}
+
+// ---------- BREAKPOINTS ----------
+$mobile-portrait: 480px;
+$mobile-landscape: 600px;
+$tablet-portrait: 868px;
+$tablet-landscape: 1024px;
+$desktop-entry: 1280px;
+
+// --------- MEDIA QUERIES ---------
+@media (max-width: $tablet-landscape) {
+    :root {
+        --dynamic-fontsize-title: 124px;
+        --dynamic-fontsize-h1: 76px;
+    }
+}
+
+@media (max-width: $tablet-portrait) {
+    :root {
+        --dynamic-fontsize-title: 96px;
+        --dynamic-fontsize-h1: 54px;
+    }
+}

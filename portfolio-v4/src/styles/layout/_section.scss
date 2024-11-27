@@ -1,0 +1,52 @@
+#portfolio-section {
+    .projects {
+        display: flex;
+        flex-direction: column;
+        gap: calc($grid-gap * 2);
+
+        .project {
+            display: flex;
+            gap: $grid-gap;
+            height: 350px;
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+
+            .cover {
+                border-radius: $radius-big;
+                flex: 2;
+            }
+
+            .content {
+                flex: 1;
+                height: inherit;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .links {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-bottom: $grid-gap;
+
+                    a {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet-landscape) {
+    #portfolio-section {
+        .projects {
+            .project, .project:nth-child(even) {
+                flex-direction: column;
+                height: auto;
+                gap: 0;
+            }
+        }
+    }
+}
