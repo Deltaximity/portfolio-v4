@@ -33,9 +33,9 @@ export default function Footer() {
                         </div>
                         <div className="links">
                             <h4>Blogs</h4>
-                            <p>This is an example blog title</p>
-                            <p>This is another example blog <title></title></p>
-                            <p>And this is a really long example blog title</p>
+                            <Link href="/blog/hotspot-app"><p>Hotspot App</p></Link>
+                            <Link href="/blog/automated-workflows-in-macos"><p>Automated Workflows in macOS</p></Link>
+                            <Link href="/blog/designing-an-efficient-desk-setup"><p>Designing an Efficient Desk Setup</p></Link>
                         </div>
                     </div>
                 </div>
