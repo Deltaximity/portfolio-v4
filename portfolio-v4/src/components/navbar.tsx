@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { navLinks } from '@/components/navLinks';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -11,6 +11,21 @@ import { motion } from 'framer-motion';
 export default function Navbar() {
     const pathname = usePathname();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 768 && isMenuOpen) {
+                setIsMenuOpen(false);
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, [isMenuOpen]);
 
     return (
         <motion.nav
@@ -30,11 +45,23 @@ export default function Navbar() {
                     />
                 </Link>
             </div>
-            <div className='links'>
+            <button className='menu-button' onClick={toggleMenu}>
+                {isMenuOpen ? <X size={30} /> : <Menu size={30} /> }
+            </button>
+            <div className={`links ${isMenuOpen ? "open h3" : ""}`}>
                 {navLinks.map((item) => (
-                    <Link key={item.href} href={item.href} className={`${pathname === item.href || (item.href !== '/' && pathname.includes(item.href)) ? 'active' : ''} ${item.href === '/contact' ? 'secondary-button' : ''}`}>{item.label}</Link>
+                    <Link key={item.href} href={item.href} onClick={isMenuOpen ? toggleMenu : () => {}} className={`${pathname === item.href || (item.href !== '/' && pathname.includes(item.href)) ? 'active' : ''} ${!isMenuOpen && item.href === '/contact' ? 'secondary-button' : ''}`}>{item.label}</Link>
                 ))}
             </div>
+            {isMenuOpen && (
+                <motion.div
+                    className="menu-overlay"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    onClick={toggleMenu}
+                ></motion.div>
+            )}
         </motion.nav>
     )
 }

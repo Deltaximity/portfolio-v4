@@ -14,6 +14,10 @@ header {
         text-align: center;
     }
 
+    .subheading {
+        text-align: center;
+    }
+
     .hero-lambda {
         position: absolute;
         top: 50%;
@@ -89,6 +93,14 @@ header {
             background-color: transparent;
             border-bottom-right-radius: $radius-big;
             box-shadow: 0 20px 0 $color-bg;
+        }
+    }
+}
+
+@media (max-width: $tablet-landscape) {
+    .blog-header {
+        h1 {
+            width: 100%;
         }
     }
 }

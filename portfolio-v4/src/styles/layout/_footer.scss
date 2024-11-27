@@ -5,8 +5,6 @@ footer {
     margin-top: $x4;
 
     .container {
-        grid-column: 2/-2;
-        
         .content-wrapper {
             // height: inherit;
             display: flex;
@@ -38,7 +36,6 @@ footer {
 
     .credits {
         height: inherit;
-        grid-column: 1/-1;
         border-top: 1px solid $color-gray;
         
         .content-wrapper {
@@ -50,6 +47,97 @@ footer {
 
         p {
             margin-right: 100px;
+        }
+    }
+}
+
+@media (max-width: $tablet-landscape) {
+    footer {
+        padding: 0 40px;
+
+        .container {
+            .content-wrapper {
+                .links-container {
+                    .links {
+                        margin-left: calc($grid-gap*2);
+                    }
+                }
+            }
+        }
+
+        .credits {
+            .content-wrapper {
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet-portrait) {
+    footer {
+        padding: 0 $grid-gap;
+
+        .container {
+            .content-wrapper {
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+
+                .logo-container {
+                    width: 100%;
+                    align-self: center;
+                    margin-bottom: $grid-gap;
+                }
+
+                .links-container {
+                    width: 100%;
+                    justify-content: space-between;
+
+                    .links {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        .credits {
+            height: auto;
+
+            .content-wrapper {
+                flex-wrap: wrap;
+
+                p {
+                    margin: 1em $grid-gap 1em 0;
+                    line-height: 2;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-landscape) {
+    footer {
+        .container {
+            .content-wrapper {
+                align-items: flex-start;
+                .links-container {
+                    flex-direction: column;
+                    .links {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .credits {
+            .content-wrapper {
+                flex-direction: column;
+                padding: 10px 0;
+                p {
+                    margin: 0;
+                }
+            }
         }
     }
 }

@@ -38,3 +38,15 @@
         }
     }
 }
+
+@media (max-width: $tablet-landscape) {
+    #portfolio-section {
+        .projects {
+            .project, .project:nth-child(even) {
+                flex-direction: column;
+                height: auto;
+                gap: 0;
+            }
+        }
+    }
+}
