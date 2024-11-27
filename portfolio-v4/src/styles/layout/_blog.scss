@@ -61,6 +61,21 @@
     gap: 20px;
     height: 300px;
     grid-column: 1/-1;
+}
+
+.sidebar {
+    display: flex;
+
+    .table-of-contents {
+        position: sticky;
+        background-color: $color-secondary;
+        height: 100px;
+        width: 100%;
+        border-radius: $radius-small;
+        padding: $grid-gap;
+        top: $grid-gap;
+    }
+}
 
 @media (max-width: $tablet-portrait) {
     .sidebar {

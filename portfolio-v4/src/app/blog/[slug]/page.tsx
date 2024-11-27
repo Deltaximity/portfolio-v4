@@ -57,6 +57,11 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             <h1 className="h1">{post.metadata.title}</h1>
         </header>
         <article>
+            <aside className='sidebar'>
+                <div className='table-of-contents'>
+                    <h2 className='h4'>Table of contents</h2>
+                </div>
+            </aside>
             <div className="post-content" style={{ position: "relative" }}>
             <ReactMarkdown
                 children={post.content}
