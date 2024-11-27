@@ -6,19 +6,6 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 
-interface PostMetadata {
-    title: string;
-    date: string;
-    category?: string;
-    image?: string;
-    alt?: string;
-}
-
-interface Post {
-    metadata: PostMetadata;
-    content: string;
-}
-
 // src/app/blog/[slug]/page.tsx
 export async function generateStaticParams() {
     const posts = await getPostMetadata();
@@ -28,20 +15,13 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-// Define an async function within generateMetadata
-async function fetchPost() {
-    return await getPostBySlug(params.slug);
-}
+    async function fetchPost() {
+        return await getPostBySlug(params.slug);
+    }
 
-const post = await fetchPost();
-
-if (!post) {
-    return { title: 'Post Not Found' };
-}
-
-return {
-    title: post.metadata.title,
-    };
+    const post = await fetchPost();
+    if (!post) return { title: 'Post Not Found' };
+    return { title: post.metadata.title }
 }
 
 // src/app/blog/[slug]/page.tsx
