@@ -41,6 +41,9 @@ $radius-big: 20px;
 
 $grid-gap: 26px;
 
+// ----------- OTHER -----------
+$global-transition: .1s;
+
 // ---------- MIXINS ----------
 @mixin primary-button {
     background-color: $color-primary;
@@ -48,6 +51,7 @@ $grid-gap: 26px;
     padding: 10px 26px;
     border-radius: 5px;
     text-align: center;
+    transition: $global-transition background;
 
     &:hover {
         background-color: $color-secondary;
