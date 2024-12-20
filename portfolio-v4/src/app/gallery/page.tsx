@@ -1,3 +1,3 @@
 export default function GalleryPage() {
-    return <h1>Hello, Gallery Page!</h1>
+    return <h1>Coming Soon ✴︎</h1>
 }

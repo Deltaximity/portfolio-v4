@@ -27,23 +27,13 @@ Hotspot needed a solution to address these concerns, so they reached out to stud
 
 I joined the Hotspot project team in 2023 during my university studies and was in charge of the planning and development of this proposed app. Together with a development team of three; two web developers (me included) and one UI/UX-designer.
 
----
-
-- Highlight any relevant trends, data, or user research findings that show why this app would be valuable.
-
 # Objectives
 
 The Hotspot app is aimed to address the issues highlighted in the three categories above. The app's goals are:
-- Help students match with the right companies
-- 
-
----
-
-- Define the goals of the app clearly. These can include:
-  - Solving a specific user problem.
-  - Increasing efficiency in a certain task.
-  - Enhancing user experience in a specific domain.
-- Mention any specific metrics or criteria used to measure success, like user engagement, adoption rates, or feedback scores.
+1. Help students match with the right companies.
+1. Help companies get recognized.
+1. Provide a pleasant and seamless user experience for all event participants.
+1. Offload the work off the Hotspot team with innovative digital solutions—This way the team can be more present with the participants at the event.
 
 # Research and User Analysis
 
@@ -64,10 +54,10 @@ The Hotspot app is aimed to address the issues highlighted in the three categori
 - Share any initial sketches, wireframes, or prototypes used to validate ideas with users.
 
 # Design and Development Process
+The development of the app incorprated some Agile elements and was planned entirely by me to ensure delivery on time with the intended features.
 
 ## Planning
-
-During the planning phase, we had to decide which frameworks to use.
+During the planning phase, we decided on which frameworks to use.
 
 ---
 
@@ -116,3 +106,5 @@ Outline the deployment process and any plans for monitoring user feedback and ap
 - Use Visuals: Screenshots, flowcharts, or sketches can make the case study more engaging.
 - Highlight User-Centric Decisions: Emphasize how the app was shaped by user needs and feedback.
 - Use Metrics and Data: Where possible, back up statements with quantitative data to strengthen credibility.
+
+Thanks for stopping by — see you under the digital stars!
