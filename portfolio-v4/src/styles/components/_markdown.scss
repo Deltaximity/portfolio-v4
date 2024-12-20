@@ -40,7 +40,11 @@ blockquote {
   // background-color: $color-secondary;
   margin: 0;
   padding: 0 $grid-gap;
-  line-height: 1.5;
+  // line-height: 1.5;
+
+  p {
+    color: darken($color: $color-gray, $amount: 20);
+  }
 
   &::before {
     content: '';

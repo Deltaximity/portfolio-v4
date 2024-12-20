@@ -28,7 +28,7 @@ h3, .h2 {
     font-family: $font-text;
     text-transform: none;
     font-size: $fontsize-h2;
-    margin: calc($grid-gap + ($grid-gap/2)) 0 calc($grid-gap/2) 0;
+    margin: calc($grid-gap*2) 0 calc($grid-gap/2) 0;
     font-weight: 500;
 }
 

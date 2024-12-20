@@ -62,6 +62,12 @@ footer {
 }
 
 @media (max-width: $desktop-entry) {
+    #portfolio-section {
+        & > * {
+            grid-column: 1/-1;
+        }
+    }
+
     .post-content {
         grid-column: 3/-2;
     }
@@ -92,6 +98,11 @@ footer {
 
     .sidebar {
         grid-column: 1/2;
+        width: 200px;
+
+        .table-of-contents {
+            padding-left: 0 !important;
+        }
     }
 
     footer {
