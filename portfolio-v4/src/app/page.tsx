@@ -1,7 +1,6 @@
 // import Header from '@/components/Header';
 import Image from "next/image";
 import Link from "next/link";
-import { Badge } from "lucide-react";
 
 export default function HomePage() {
   return (

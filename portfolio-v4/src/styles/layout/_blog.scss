@@ -21,7 +21,7 @@
             }
 
             .image-container {
-                height: 200;
+                height: 200px;
                 position: relative;
                 margin-bottom: 10px;
 
@@ -63,10 +63,6 @@
     grid-column: 1/-1;
 }
 
-.post-image {
-    margin-top: calc($grid-gap * 2);
-}
-
 .sidebar {
     display: block;
     font-size: $fontsize-fineprint;
@@ -76,6 +72,7 @@
         position: sticky;
         // background-color: $color-secondary;
         width: 100%;
+        max-width: 260px;
         border-radius: $radius-small;
         padding: $grid-gap;
         top: $grid-gap;

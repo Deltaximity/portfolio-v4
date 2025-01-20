@@ -6,8 +6,8 @@ $color-text: #2D2D2D;
 $color-bg: #FDFBF5;
 
 // ----------- FONT -----------
-$font-display: 'Syne', sans-serif;
-$font-text: 'Inter', sans-serif;
+$font-display: var(--font-syne, sans-serif);
+$font-text: var(--font-inter, sans-serif);
 
 // --------- FONT SIZE ---------
 :root {

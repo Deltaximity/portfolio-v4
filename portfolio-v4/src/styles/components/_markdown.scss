@@ -1,6 +1,10 @@
 .post-content {
   p {
     line-height: 1.8;
+
+    &:has(.post-image) {
+      color: $color-gray;
+    }
   }
 }
 
@@ -10,6 +14,7 @@
   height: 500px;
   width: calc(100% + ($grid-gap*2));
   transform: translateX(-$grid-gap);
+  // margin-top: calc($grid-gap * 2);
 
   img {
     border-radius: $radius-small;

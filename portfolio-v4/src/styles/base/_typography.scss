@@ -45,7 +45,7 @@ h5, .h4 {
     font-weight: 500;
     font-size: $fontsize-h4;
     text-transform: none;
-    margin: $grid-gap 0 calc($grid-gap/2) 0;
+    margin: calc($grid-gap*1.5) 0 calc($grid-gap/2) 0;
 }
 
 .subheading {
