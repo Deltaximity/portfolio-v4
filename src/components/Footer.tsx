@@ -44,6 +44,7 @@ export default function Footer() {
                 <div className="content-wrapper fineprint">
                     <p>Made with <Heart size={14} /> by <Link href="https://github.com/Deltaximity">Hasan Ali</Link></p>
                     <p>© Deltaximity - All rights reserved</p>
+                    <p>Version: <code>4.0.0-beta</code></p>
                 </div>
             </div>
         </footer>

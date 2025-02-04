@@ -37,17 +37,16 @@ footer {
     .credits {
         height: inherit;
         border-top: 1px solid $color-gray;
+        padding: 0 calc($grid-gap*3);
         
         .content-wrapper {
             height: inherit;
             display: flex;
             align-items: center;
-            padding-left: 12.5%; // 100/8 columns
+            justify-content: space-between;
+            gap: 0 $grid-gap;
         }
 
-        p {
-            margin-right: 100px;
-        }
     }
 }
 
@@ -66,9 +65,7 @@ footer {
         }
 
         .credits {
-            .content-wrapper {
-                padding-left: 0;
-            }
+            padding: 0;
         }
     }
 }
@@ -108,8 +105,7 @@ footer {
                 flex-wrap: wrap;
 
                 p {
-                    margin: 1em $grid-gap 1em 0;
-                    line-height: 2;
+                    line-height: 1;
                 }
             }
         }
@@ -135,7 +131,7 @@ footer {
                 flex-direction: column;
                 padding: 10px 0;
                 p {
-                    margin: 0;
+                    margin: 8px;
                 }
             }
         }
