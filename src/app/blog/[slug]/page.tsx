@@ -66,7 +66,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                         <Image
                             src={props.src || ''}
                             alt={props.alt || 'Markdown image'}
-                            fill
+                            height={0}
+                            width={0}
+                            sizes="(max-width: 600px) 100vw, (max-width: 1024px) 80vw, 60vw"
                             style={{ objectFit: "cover" }}
                         />
                         </span>

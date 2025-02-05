@@ -11,13 +11,14 @@
 .post-image {
   display: block;
   position: relative;
-  height: 500px;
+  height: auto;
   width: calc(100% + ($grid-gap*2));
   transform: translateX(-$grid-gap);
-  // margin-top: calc($grid-gap * 2);
 
   img {
     border-radius: $radius-small;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -91,6 +92,13 @@ table {
     .checkbox {
       display: none;
     }
+  }
+}
+
+@media (max-width: $tablet-landscape) {
+  .post-image {
+    width: 100%;
+    transform: translateX(0);
   }
 }
 
