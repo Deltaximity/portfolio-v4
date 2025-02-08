@@ -126,3 +126,19 @@
         }
     }
 }
+
+@media (max-width: $desktop-entry) {
+    #portfolio-section {
+        .projects {
+            .project {
+                .cover {
+                    flex: 4;
+                }
+
+                .content {
+                    flex: 3;
+                }
+            }
+        }
+    }
+}
