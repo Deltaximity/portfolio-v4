@@ -36,7 +36,7 @@ export default function HomePage() {
               </div>
               <div className="links">
                 <Link href="/blog/hotspot-app" className="secondary-button">View project</Link>
-                <Link href="https://hotspot.kau.se/app" className="primary-button">Visit website</Link>
+                <Link href="https://app.hotspot.kau.se" className="primary-button">Visit website</Link>
               </div>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function HomePage() {
                 <p>Dive deeper into behind the scenes of my workspace, and what makes it so special.</p>
               </div>
               <div className="links">
-                <Link href="/blog/designing-an-efficient-setup" className="secondary-button">View project</Link>
+                <Link href="/blog/designing-an-efficient-desk-setup" className="secondary-button">View project</Link>
               </div>
             </div>
           </div>
