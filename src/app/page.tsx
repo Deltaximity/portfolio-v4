@@ -97,7 +97,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <Link href="/" className="primary-button">Browse projects</Link>
+          <Link href="/blog" className="primary-button">Browse projects</Link>
         </div>
       </section>
       <section>
