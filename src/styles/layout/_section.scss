@@ -66,6 +66,8 @@
 
 .say-hello-section {
     overflow: hidden;
+    gap: 0;
+    
     h2 {
         // text-align: center;
         margin: 150px 0 60px 0;
@@ -73,7 +75,6 @@
 
     .image-container {
         position: relative;
-        grid-column: 3/-3;
         height: 500px;
         
         p {

@@ -104,3 +104,11 @@ header {
         }
     }
 }
+
+@media (max-width: $tablet-portrait) {
+    .main-hero {
+        overflow: hidden;
+        width: calc(100%);
+        // transform: translateX(-$grid-gap);
+    }
+}

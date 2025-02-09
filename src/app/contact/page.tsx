@@ -25,15 +25,15 @@ export default function Contact() {
             <section className="say-hello-section">
                 <h2>Say Hello</h2>
                 <div className="image-container">
-                    <p className="h3">Leaves</p>
+                    <p className="h3">Creating</p>
                     <Image 
                         src="/assets/img/DSC00402.jpg"
                         alt=""
                         fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 50vw"
+                        sizes="100vw"
                         style={{ objectFit: "cover" }}
                         />
-                    <p className="h3">XXIII</p>
+                    <p className="h3">Growing</p>
                 </div>
                 <Link href="mailto:hello@deltaximity.com" className="primary-button"><Mail size={20} />hello@deltaximity.com</Link>
             </section>
