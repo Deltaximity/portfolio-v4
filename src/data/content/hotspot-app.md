@@ -8,16 +8,13 @@ date: "2024"
 ---
 # Summary
 
-Hotspot is a Progressive Web App (PWA) engineered to transform the annual job fair experience at Karlstad University. With over 8,000 students and more than 130 companies converging for a 5.5-hour event, traditional printed maps and fragmented event information proved inefficient. I recognized the need for a digital solution that could quickly consolidate essential details into one intuitive platform. In this case study, I share my journey through the design, development, and testing phases of Hotspot, highlighting key decisions, challenges, and the lessons I learned along the way.
+Hotspot is a Progressive Web App (PWA) developed to transform the annual job fair experience at Karlstad University. With over 8,000 students and more than 130 companies participating a 5.5-hour event, traditional printed maps and fragmented event information were inefficient, and the existing solution on their official website was confusing. I recognized the need for a digital solution that could quickly consolidate essential details into one intuitive platform. In this case study, I share my journey through the design, development, and testing phases of Hotspot, highlighting problem-solving process, challenges, and the lessons I learned along the way.
 
 # Background
 
 [Hotspot](https://hotspot.kau.se/) is an organization that hosts Sweden's largest annual job fair at [Karlstad University](https://www.kau.se/en). Founded by students in 1998, the event has consistently attracted over 130 companies and sees more than 8000 student visitors each year.
 
-As Hotspot's popularity grew, new challenges emerged: 
-- **Students** found it difficult to navigate the event, struggling with confusing maps and a lack of company information they had to look up themselves.
-- **Companies** voiced concerns about their booth visibility, as those farther from the event's center received less attention.
-- **The Hotspot team** faced increasing logistical strain, from handling event planning to addressing unauthorized acces by non-university students.
+As Hotspot grew in popularity, they were faced with new challenges: Students found it difficult to navigate the event, struggling with confusing maps and a lack of company information they had to look up themselves. Companies voiced concerns about their booth visibility, as those farther from the event's center received less attention. The Hotspot team faced increasing logistical strain, from handling event planning to addressing unauthorized acces by non-university students.
 
 To summarize, we see clear problems from three sides:
 | Hotspot | Students | Companies |
@@ -25,27 +22,28 @@ To summarize, we see clear problems from three sides:
 | Resource-intensive logistics | Confusing navigation with printed maps | Booths in less visible areas recieved fewer visitors |
 | Unauthorized students attending | Lack of company information | Struggled to attract the right students |
 
-To address these concerns, Hotspot sought an **innovative matchmaking solution** that could bridge the gap between students and companies. They turned to the web development program at Karlstad University, inviting students **to deisgn and develop a digital solution** for the event.
+To address these concerns, Hotspot needed an innovative matchmaking solution that could bridge the gap between students and companies. They turned to the web development program at Karlstad University, inviting students to design and develop a digital solution for the event.
 
-I joined the Hotspot project team in 2023 during my university studies, taking charge of planning and development alongside **a team of three people**—two web developers (including myself) and one UI/UX-designer.
+I joined the Hotspot project team in 2023 during my university studies, taking charge of planning and development alongside a team of three people. Two web developers (including myself) and one UI/UX-designer.
 
 # Objectives
 
-The **Hotspot app** was designed to directly address the challenges faced by students, companies, and the Hotspot team. Its key objectives were to:
-1. **Match students with the right companies** - Make it easier for students to find relevant exhibitors.
-1. **Increase company visibility** - Ensure all exhibitors receive recognition, regardless of booth placement.
-1. **Enhance the user experience** - Create a smooth intuitive event navigation system.
-1. **Reduce logistical strain on the Hotspot team** - Implement digital solutions that streamline even management, allowing the team to focus on engaging with participants.
+The **Hotspot app** was designed to directly address the challenges faced by students, companies, and the Hotspot team:
+1. Match students with the right companies.
+1. Ensure companies receive recognition, regardless of booth placement.
+1. Enhance the user experience through a smooth intuitive event navigation system.
+1. Reduce logistical strain on the Hotspot team.
 
 # Understanding User Needs
 
 Before development began, we focused on **understanding the problem itself**, what students were looking for, what companies had to offer, and how we could bridge the gap effectively. Rather than conducting formal studies, we relied on firsthand experience and available data to identify pain points and inform our technical decisions.
 
-## Key Challenges
-- The event lasts **only 5.5 hours on a single day per year**, making efficiency crucial. Students must find relevant companies quickly.
-- **Students struggled** to locate companies suited to their field, leading to missed opportunities.
-- **Companies had diverse offerings**, from full-time employment to internships and thesis work, but lacked a way to effectively match with the right students.
-- **The event format was limiting**, without a structured way to explore industries and roles, many participants navigated the fair at random.
+## Challenges
+The event only lasts 5.5 hours on a single day per year, making efficiency crucial. Students struggled to locate companies suited to their field, leading to missed opportunities. Companies had diverse offerings but lacked a way to effectively match with the right students. The event format was limiting, without a structured way to explore industries and roles, many participants navigated the fair at random.
+
+1. The event is only 5.5 hours
+1. Existing solutions were confusing and inefficient.
+1. A lot of students navigated the event at random.
 
 ## Industries & Roles
 To understand the range of opportunities available, we categorized the industries and roles companies provided:
@@ -65,7 +63,7 @@ Addtionally, we looked into other data points such as:
 - Additional information companies provided
 - Booth location at the event
 
-These insights shaped the **core functionality** of the Hotspot app—**helping students quickly connect with relevant companies** while ensuring companies gained visibility among the right audience.
+These points shaped the **core functionality** of the Hotspot app, to directly address the root problems and help students find the right companies.
 
 # Design and Development Process
 The development of the app incorprated some Agile elements and was planned entirely by me to ensure delivery on time with the intended features and a polished end product.
@@ -159,11 +157,13 @@ This is helpful when students want to do research about the companies prior to t
 ## Advanced Search, Sort and Filtering Options
 ![Mockup of iPhone showcasing search bar and filter button](/assets/blog/images/blog-hotspot-search.png)
 
-To further enhance usability, the app provides advanced options for searching, sorting, and filtering company listings. These tools empower students to tailor their exploration based on specific criteria, ensuring they can quickly identify opportunities that best fit their career interests.
+To further enhance usability, the app provides advanced options for searching, sorting, and filtering company listings. Students have the option to; filter by `industy` and/or `role`, sort in `alphabetical`, `reverse-alphabetical` or `recommended` order, or **search specific keywords**. These tools empower students to tailor their exploration based on specific criteria, ensuring they can quickly identify opportunities that best fit their career interests.
 
 # Results
 While we didn’t conduct a formal empirical study, and the marketing team had limited time to attract a large user base, the early anecdotal feedback has been overwhelmingly positive.
-- **Enhanced User Experience:** Despite the limited data, both students and team members have found the app incredibly useful. Its seamless onboarding process and glanceable company details made navigating the 5.5-hour event much easier.
+
+Despite the limited data, both students and team members have found the app incredibly useful. The seamless UX and glanceable company details made navigating the event much easier.
+
 - **Improved Company Visibility:** The app’s advanced search and filtering features helped companies, even those with less prominent booth positions, gain better recognition among students.
 - **Operational Efficiency:** The app’s advanced search and filtering features helped companies, even those with less prominent booth positions, gain better recognition among students.
 - **Personal Endorsement:** On a personal note, I found the app so effective and intuitive that I kept coming back to it. Its seamless functionality truly underscored the purpose it was designed to serve.
