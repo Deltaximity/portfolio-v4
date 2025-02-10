@@ -27,7 +27,7 @@ export default function About() {
                 <h2>Me at work</h2>
                 <div className="container">
                     <div className="item">
-                        <h3>Problem-solving is ❤️</h3>
+                        <h3>Problem-Solving is ❤️</h3>
                         <p>I thrive on problem-solving. Whether it's debugging code, crafting interactive experiences, or figuring out how to make a noise overlay pixel-perfect in Next.js (yes, really). I believe in creating things that are not only functional but also meaningful, intuitive, and a joy to use.</p>
                     </div>
                     <div className="item">
@@ -38,6 +38,7 @@ export default function About() {
                     <div className="item">
                         <h3>Thinking in Systems</h3>
                         <p>The bigger picture, connecting the dots. How does one very specific feature work and interact with other features in the system?</p>
+                        <p>I like to build things that evolve into one cohesive system. A system that not only works seamlessly but also feels intuitive and meaningful to those who use it.</p>
                     </div>
                 </div>
             </section>
