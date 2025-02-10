@@ -11,8 +11,8 @@ $font-text: var(--font-inter, sans-serif);
 
 // --------- FONT SIZE ---------
 :root {
-    --dynamic-fontsize-title: 144px;
-    --dynamic-fontsize-h1: 96px;
+    --dynamic-fontsize-title: 96px;
+    --dynamic-fontsize-h1: 60px;
     --dynamic-fontsize-h2: 30px;
     --dynamic-fontsize-h3: 22px;
     --dynamic-fontsize-h4: 20px;
@@ -88,14 +88,14 @@ $desktop-entry: 1280px;
 // --------- MEDIA QUERIES ---------
 @media (max-width: $tablet-landscape) {
     :root {
-        --dynamic-fontsize-title: 124px;
-        --dynamic-fontsize-h1: 76px;
+        --dynamic-fontsize-title: 84px;
+        --dynamic-fontsize-h1: 72px;
     }
 }
 
 @media (max-width: $tablet-portrait) {
     :root {
-        --dynamic-fontsize-title: 84px;
+        --dynamic-fontsize-title: 54px;
         --dynamic-fontsize-h1: 48px;
     }
 }

@@ -1,11 +1,13 @@
-import Image from "next/image"
-import { Camera, KeyboardMusic, Microchip } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { Camera, ChartSpline, KeyboardMusic, MessageCircleQuestion, Microchip, MonitorCheck } from "lucide-react";
+import SayHello from "@/components/SayHello";
 
 export default function About() {
     return (
         <>
             <section id="about-me">
-                <h1 className="h1">About me</h1>
+                <h2 className="h1">About me</h2>
                 <div className="container">
                     <div className="image-container">
                         <Image 
@@ -17,14 +19,14 @@ export default function About() {
                             />
                     </div>
                     <div className="content">
-                        <h2 className="h2">Hi,</h2>
+                        <h2 className="h2">Hej! 🥹</h2>
                         <p>I'm a web developer based in Sweden 🇸🇪. I have a knack for clean code, a passion for open-source software, and an eye for detail. When I'm not coding, you'll find me making music, capturing life through photography, or working on my next project—whether it's electronics, design, or solving human problems (we all have those right?).</p>
                         <p>— Hasan Ali</p>
                     </div>
                 </div>
             </section>
             <section id="at-work">
-                <h2>Me at work</h2>
+                <h2 className="h2">Me at Work</h2>
                 <div className="container">
                     <div className="item">
                         <h3>Problem-Solving is ❤️</h3>
@@ -43,14 +45,14 @@ export default function About() {
                 </div>
             </section>
             <section>
-                <h2>Background</h2>
+                <h2 className="h2">Background</h2>
                 <div className="container">
                     <p>I come from a diverse background, both culturally and technically. Over the years I've learned and adopted different viewpoints and approaches to human problems and design, and I'm constantly improving and adapting my approaches. <strong>Forever a learner</strong>.</p>
-                    <p>I have a background in <b>teaching</b> and <b>tutoring</b> for 3 consecutive years. How do you teach—let alone communicate with—someone who doesn't speak the language? This is like a developer talking in technical terms to lay people. It's all about breaking down complex concepts into simple, relatable, human terms than even a 5 year-old can understand.</p>
+                    <p>I have a background in <b>teaching</b> and <b>tutoring</b>. How do you teach—let alone communicate with—someone who doesn't speak the language? This is like a developer talking in technical terms to regular people. It's all about breaking down complex concepts into simple, relatable, human terms that even a 5 year-old can understand.</p>
                 </div>
             </section>
             <section>
-                <h2>Right Now</h2>
+                <h2 className="h2">Right Now</h2>
                 <p>Right now, I'm refining my portfolio, experimenting with Framer Motion animations, and exploring Notion scripting to automate workflows. I'm also on a journey to balance creativity and productivity, one step at a time.</p>
             </section>
             <section id="more-about-me">
@@ -94,9 +96,31 @@ export default function About() {
                     </div>
                 </div>
             </section>
-            <section>
+            <section id="get-in-touch">
                 <h2>Get in touch</h2>
+                <p>I'm a front-end developer who's passionate about transforming complex challenges into clean intuitive digital experiences. I thrive on solving real human problems with tech, whether it's crafting pixel-perfect UIs or building cohesive systems from scratch.</p>
+                <h3>Why Reach Out?</h3>
+                <div className="container">
+                    <div className="item">
+                        <MonitorCheck className="icon" size={36} strokeWidth={1.5} />
+                        <h3>Innovative Solutions</h3>
+                        <p>I love turning ideas into impactful, user-friendly applications (like the Hotspot App).</p>
+                    </div>
+                    <div className="item">
+                        <MessageCircleQuestion className="icon" size={36} strokeWidth={1.5} />
+                        <h3>Creative Problem-Solving</h3>
+                        <p>My diverse background—from teaching to electronics—means I bring a unique perspective to every project.</p>
+                    </div>
+                    <div className="item">
+                        <ChartSpline className="icon" size={36} strokeWidth={1.5} />
+                        <h3>Continuous Growth</h3>
+                        <p>I’m always learning, experimenting with new technologies (Next.js, Framer Motion, Notion scripting), and refining my craft.</p>
+                    </div>
+                </div>
+                <p>If you’re looking for someone who not only writes clean code but also understands how to make technology work for people, I’d love to chat about how I can contribute to your team.</p>
+                <p><b>Reach me at:</b> <Link href="mailto:hello@deltaximity.com">hello@deltaximity.com</Link> or connect with me on <Link href="https://www.linkedin.com/in/hasan-ali-955aaa295/">LinkedIn</Link></p>
             </section>
+            <SayHello />
         </>
     )
 }

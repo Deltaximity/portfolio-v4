@@ -1,7 +1,7 @@
 export const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/gallery', label: 'Gallery' },
-    { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' }
+    { href: '#portfolio-section', label: 'Projects' },
+    // { href: '/gallery', label: 'Gallery' },
+    { href: '#about-me', label: 'About' },
+    { href: '#get-in-touch', label: 'Contact' }
 ];

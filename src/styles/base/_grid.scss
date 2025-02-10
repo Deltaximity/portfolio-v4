@@ -4,6 +4,8 @@ body {
     grid-template-columns: calc($grid-gap*2) repeat(5, 1fr) calc($grid-gap*2);
     gap: 0 26px;
     margin: 0 40px;
+    max-width: 1800px;
+    place-self: center;
 
     & > * {
         grid-column: 1/-1;
@@ -46,11 +48,11 @@ article {
     }
 }
 
-.say-hello-section {
-    .image-container {
-        grid-column: 2/-2;
-    }
-}
+// .say-hello-section {
+//     .image-container {
+//         grid-column: 2/-2;
+//     }
+// }
 
 footer {
     display: inherit;

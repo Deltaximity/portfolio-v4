@@ -1,13 +1,14 @@
 // import Header from '@/components/Header';
 import Image from "next/image";
 import Link from "next/link";
+import About from "./about/page";
 
 export default function HomePage() {
   return (
     <>
       <header className="main-hero">
-        <h1 className="h1">Deltaximity</h1>
-        <p className="subheading">Developer, photographer, designer, musician</p>
+        <h1>Deltaximity</h1>
+        <p className="subheading">Front-end developer that loves solving human problems with tech.</p>
         <Image 
           className="hero-lambda"
           src="/assets/img/Lambda.png"
@@ -35,12 +36,12 @@ export default function HomePage() {
                 <p>My most ambitious project to date. Designed from the ground up. A PWA app that contributes to the technological advancement of <Link href="https://hotspot.kau.se/">Hotspot</Link> under <Link href="https://www.kau.se/">Karlstad University</Link>. Annually helping over 8000 students connect with employers at the Hotspot job fair.</p>
               </div>
               <div className="links">
-                <Link href="/blog/hotspot-app" className="secondary-button">View project</Link>
+                <Link href="/projects/hotspot-app" className="secondary-button">View project</Link>
                 <Link href="https://app.hotspot.kau.se" className="primary-button">Visit website</Link>
               </div>
             </div>
           </div>
-          <div className="project">
+          {/* <div className="project">
             <Image 
               className="cover"      
               src="/assets/img/mockup3.webp"
@@ -96,13 +97,35 @@ export default function HomePage() {
                 <Link href="/blog/designing-an-efficient-desk-setup" className="secondary-button">View project</Link>
               </div>
             </div>
-          </div>
           <Link href="/blog" className="primary-button">Browse projects</Link>
+          </div> */}
+          <div className="demo">
+            <h3>Stay tuned for more...</h3>
+            <div className="container">
+              <Image 
+                className="cover"
+                src="/assets/img/mockup3.webp"
+                alt=""
+                width={600}
+                height={0}
+                style={{objectFit: 'cover', height: 'auto', width: '100%'}}
+              />
+              <Image 
+                className="cover"
+                src="/assets/img/IMG_2887.webp"
+                alt=""
+                width={600}
+                height={0}
+                style={{objectFit: 'cover', height: 'auto', width: '100%'}}
+              />
+            </div>
+          </div>
         </div>
       </section>
-      <section>
+      {/* <section>
         <h2>About</h2>
-      </section>
+      </section> */}
+      <About />
     </>
   )
 }

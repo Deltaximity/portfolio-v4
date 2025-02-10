@@ -50,7 +50,7 @@ export default function Navbar() {
             </button>
             <div className={`links ${isMenuOpen ? "open h3" : ""}`}>
                 {navLinks.map((item) => (
-                    <Link key={item.href} href={item.href} onClick={isMenuOpen ? toggleMenu : () => {}} className={`${pathname === item.href || (item.href !== '/' && pathname.includes(item.href)) ? 'active' : ''} ${!isMenuOpen && item.href === '/contact' ? 'secondary-button' : ''}`}>{item.label}</Link>
+                    <Link key={item.href} href={item.href} onClick={isMenuOpen ? toggleMenu : () => {}} className={`${pathname === item.href || (item.href !== '/' && pathname.includes(item.href)) ? 'active' : ''} ${!isMenuOpen && item.href === '#get-in-touch' ? 'secondary-button' : ''}`}>{item.label}</Link>
                 ))}
             </div>
             {isMenuOpen && (

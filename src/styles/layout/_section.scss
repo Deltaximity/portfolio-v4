@@ -7,7 +7,7 @@
         .project {
             display: flex;
             gap: $grid-gap;
-            height: 350px;
+            height: 500px;
 
             &:nth-child(even) {
                 flex-direction: row-reverse;
@@ -33,6 +33,25 @@
                     a {
                         margin-right: 10px;
                     }
+                }
+            }
+        }
+
+        .demo {
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: calc($grid-gap*4);
+
+            .container {
+                opacity: .7;
+                display: flex;
+                gap: $grid-gap;
+                width: 50%;
+                height: 200px;
+                
+                .cover {
+                    flex: 1;
+                    border-radius: $radius-big;
                 }
             }
         }
@@ -68,14 +87,9 @@
     overflow: hidden;
     gap: 0;
 
-    h2 {
-        // text-align: center;
-        margin: 150px 0 60px 0;
-    }
-
     .image-container {
         position: relative;
-        height: 500px;
+        height: 300px;
         
         p {
             color: $color-primary;
@@ -137,7 +151,7 @@
     }
 }
 
-#at-work, #more-about-me {
+#at-work, #more-about-me, #get-in-touch {
     h3 {
         margin-top: $grid-gap;
     }
@@ -161,6 +175,22 @@ section h2 {
     margin-top: 100px;
 }
 
+@media (max-width: $desktop-entry) {
+    #portfolio-section {
+        .projects {
+            .project {
+                .cover {
+                    flex: 4;
+                }
+
+                .content {
+                    flex: 3;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: $tablet-landscape) {
     #portfolio-section {
         .projects {
@@ -173,17 +203,13 @@ section h2 {
     }
 }
 
-@media (max-width: $desktop-entry) {
-    #portfolio-section {
-        .projects {
-            .project {
-                .cover {
-                    flex: 4;
-                }
+@media (max-width: $tablet-portrait) {
+    #about-me {
+        .container {
+            flex-wrap: wrap;
 
-                .content {
-                    flex: 3;
-                }
+            .image-container {
+                min-width: 100%;
             }
         }
     }

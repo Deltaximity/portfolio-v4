@@ -21,7 +21,7 @@ export default function BlogPage() {
     return (
         <div>
             <section className="blogs-list">
-                <h1 className="h1">All Blogs</h1>
+                <h1 className="h1">All Projects</h1>
                 <ul className="cards">
                     {posts.map((post) => (
                         <li key={post.slug} className="card">
@@ -45,7 +45,7 @@ export default function BlogPage() {
                     ))}
                     <li className="card demo">
                         <CircleCheck size={50} strokeWidth={1} />
-                        <p>More blogs and case studies coming soon...</p>
+                        <p>More projects and case studies coming soon...</p>
                     </li>
                 </ul>
             </section>
