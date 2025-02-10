@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import Link from "next/link";
 import Image from "next/image";
+import { CircleCheck } from 'lucide-react';
 
 interface PostMetadata {
     slug: string;
@@ -42,6 +43,10 @@ export default function BlogPage() {
                             </Link>
                         </li>
                     ))}
+                    <li className="card demo">
+                        <CircleCheck size={50} strokeWidth={1} />
+                        <p>More blogs and case studies coming soon...</p>
+                    </li>
                 </ul>
             </section>
         </div>
