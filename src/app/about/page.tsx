@@ -49,6 +49,7 @@ export default function About() {
                 <div className="container">
                     <p>I come from a diverse background, both culturally and technically. Over the years I've learned and adopted different viewpoints and approaches to human problems and design, and I'm constantly improving and adapting my approaches. <strong>Forever a learner</strong>.</p>
                     <p>I have a background in <b>teaching</b> and <b>tutoring</b>. How do you teach—let alone communicate with—someone who doesn't speak the language? This is like a developer talking in technical terms to regular people. It's all about breaking down complex concepts into simple, relatable, human terms that even a 5 year-old can understand.</p>
+                    <p>I started learning HTML back when I was 15. I loved learning and experimenting with code at the time and continued my web dev journey since. I love front-end dev and working with technologies like <b>React</b>, <b>TypeScript</b> and <b>SCSS</b>.</p>
                 </div>
             </section>
             <section>
@@ -61,7 +62,7 @@ export default function About() {
                     <div className="item">
                         <KeyboardMusic className="icon" size={36} strokeWidth={1.5} />
                         <h3>Music</h3>
-                        <p>I play guitar and piano, I also record and create a lot of music on GarageBand, Logic X, and Ableton Live. Est. 2016.</p>
+                        <p>I play guitar and piano. I also record and create a lot of music on GarageBand, Logic X, and Ableton Live. Est. 2016.</p>
                         <h4>Gear</h4>
                         <ul>
                             <li>Guitars: Yamaha Pacifica 112, Epiphone Acoustic Guitar, Amada Classical Guitar</li>
@@ -98,7 +99,7 @@ export default function About() {
             </section>
             <section id="get-in-touch">
                 <h2>Get in touch</h2>
-                <p>I'm a front-end developer who's passionate about transforming complex challenges into clean intuitive digital experiences. I thrive on solving real human problems with tech, whether it's crafting pixel-perfect UIs or building cohesive systems from scratch.</p>
+                <p>I'm a front-end developer who's passionate about transforming complex challenges into clean intuitive digital experiences. I thrive on solving real human problems with tech, whether it's crafting intuitive UIs or building cohesive systems from scratch.</p>
                 <h3>Why Reach Out?</h3>
                 <div className="container">
                     <div className="item">

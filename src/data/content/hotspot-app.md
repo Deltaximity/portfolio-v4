@@ -116,8 +116,8 @@ During development, we used `Github` for version control, and set up standardize
 
 ## Testing
 We set an initial deadline for the app to reach a state ready for testing. Early tests within the Hotspot team revealed several issues:
-- **UX Problems:** Some users experienced unresponsive interactivity and navigation issues. Particularly with search and filtering functionality on iOS devices.
-- **Crashes:** For some users, the "Favorites" pages caused a complete app crash, which was a critical red flag.
+- **UX Problems:** Some team members experienced unresponsive interactivity and navigation issues. Particularly with search and filtering functionality on iOS devices.
+- **Crashes:** For some team members, the "Favorites" pages caused a complete app crash, which was a critical red flag.
 
 We took note of all the bugs encountered and told the team to write "mini bug reports" that included: 
 1. The device and browser used.
@@ -140,17 +140,17 @@ The app is PWA and engineered for immediate use. Its responsive and efficient de
 ## Onboarding and Recommendations
 ![Mockup of iPhone showcasing Hotspot app onboarding page)](/assets/blog/images/blog-hotspot-onboarding.png)
 
-Upon launching the app, users are guided through an onboarding process that helps them get started quickly. This process not only introduces key features but also offers tailored recommendations, ensuring that students are directed toward companies that match their interests from the outset.
+Upon launching the app, students are guided through an onboarding process that helps them get started quickly. This process not only introduces key features but also offers tailored recommendations, ensuring that students are directed toward companies that match their interests from the outset.
 
 ## Information at a Glance
 ![Hotspot app showcasing a company card with arrows and labels (company, description, tags, favorite)](/assets/blog/images/blog-hotspot-card.png)
 
-The app presents company information in a concise, glanceable format. Key details such as *company name, description, tags*, and an option to *favorite* allow users to quickly determine which companies align with their interests. This is especially important during the event, where students have only **5.5 hours** to navigate through **130 company booths**. Given that interactions at each booth can last anywhere from **15 minutes to 1 hour**, quick access to essential details is critical.
+The app presents company information in a concise, glanceable format. Key details such as *company name, description, tags*, and an option to *favorite* allow students to quickly determine which companies align with their interests. This is especially important during the event, where students have only **5.5 hours** to navigate through **130 company booths**. Given that interactions at each booth can last anywhere from **15 minutes to 1 hour**, quick access to essential details is critical.
 
 ## Ability to Favorite Companies
 ![Mockup of iPhone showcasing company card favorite button](/assets/blog/images/blog-hotspot-favorite.png)
 
-The user can save companies in a `Favorites` list and view them at any time. The `Favorites` list has the same advanced searching and filtering options as the main page, and the user can search, sort and filter as they like within this list. The user then can click on the card to reveal more information about the company.
+Students can save companies in a `Favorites` list and view them at any time. The `Favorites` list has the same advanced searching and filtering options as the main page, and the student can search, sort and filter as they like within this list. The student then can click on the card to reveal more information about the company.
 
 This is helpful when students want to do research about the companies prior to the main event day.
 
@@ -162,23 +162,23 @@ To further enhance usability, the app provides advanced options for searching, s
 # Results
 While we didn’t conduct a formal empirical study, and the marketing team had limited time to attract a large user base, the early anecdotal feedback has been overwhelmingly positive.
 
-Despite the limited data, both students and team members have found the app incredibly useful. The seamless UX and glanceable company details made navigating the event much easier.
+Despite the limited data, both students and team members have found the app incredibly useful. The seamless UX and glanceable company details made navigating the event much easier. The app’s advanced search and filtering features was particularly helpful in quickly finding the companies students were looking for, regardless of booth placement.
 
-- **Improved Company Visibility:** The app’s advanced search and filtering features helped companies, even those with less prominent booth positions, gain better recognition among students.
-- **Operational Efficiency:** The app’s advanced search and filtering features helped companies, even those with less prominent booth positions, gain better recognition among students.
-- **Personal Endorsement:** On a personal note, I found the app so effective and intuitive that I kept coming back to it. Its seamless functionality truly underscored the purpose it was designed to serve.
-- **Room for Future Enhancements:** While the feedback has been positive, we did encounter minor stability issues and other challenges during testing. These experiences have provided valuable insights for future improvements.
+On a personal note, I found the app so effective and intuitive that I kept coming back to it. Its seamless functionality truly underscored the purpose it was designed to serve.
+
+## Room for Future Enhancements
+While the feedback has been positive and there's wasn't any stability issues, we did encounter a major issue with updating the images in the frontend. The limited time for testing and marketing had led the team into a crunch time, and the app couldn't reach a large enough user base. Of course, this is the first iteration of the app and there will be more future updates from the team. These experiences have provided valuable insights for future improvements.
 
 # Conclusion
 The Hotspot app has emerged as a vital digital solution for enhancing the annual job fair at Karlstad University. By addressing the unique challenges faced by students, companies, and the Hotspot team, the app streamlines the process of connecting students with the right companies, while also reducing the logistical burdens traditionally associated with the event.
 
-Despite limited marketing time and a modest initial user base, early anecdotal feedback has confirmed the app’s effectiveness. Students appreciated its intuitive design and quick access to essential information during the tight 5.5-hour event, and companies benefited from improved visibility, even those with less prominent booth placements. Personally, I found the app so compelling that I continued using it, a testament to the thoughtful design and purposeful functionality behind it.
+Despite limited marketing time and a modest initial user base, early anecdotal feedback has confirmed the app’s effectiveness. Students appreciated its intuitive design and quick access to essential information during the tight 5.5-hour event. Personally, I found the app so compelling that I continued using it, a testament to the thoughtful design and purposeful functionality behind it.
 
-Developed using an agile approach, the project showcased careful planning, strategic technology choices, and close collaboration between developers and designers. This process not only met immediate needs but also laid the groundwork for future enhancements. As we refine and expand the app, our goal remains to create an even more seamless and engaging job fair experience for everyone involved.
+Developed from scratch using an agile approach, the project showcased careful planning, strategic technology choices, and close collaboration between us developers and the team members. This process not only met immediate needs but also laid the groundwork for future enhancements.
 
 In summary, the Hotspot app stands as a successful example of how targeted digital innovation can transform traditional events, delivering meaningful improvements for students, companies, and event organizers alike.
 
 # Parting Words
-This project has been more than just a technical challenge—it’s been a journey of learning, problem-solving, and personal growth. Building the Hotspot app allowed me to dive deep into real-world issues and explore how digital solutions can make a tangible difference, even within the tight constraints of an annual event. I hope this case study offers you a window into my thought process and the creative decisions that guided this project.
+This project has been more than just a technical challenge, it’s been a journey of learning, problem-solving, and personal growth. Building the Hotspot app allowed me to dive deep into real-world issues and explore how digital solutions can make a tangible difference, even within the tight constraints of an annual event. I hope this case study offers you a window into my thought process and the creative decisions that guided this project.
 
-**Thank you** for joining me on this journey. Whether you’re a fellow developer or simply curious about digital innovation, I appreciate you reading my story. I look forward to future challenges and opportunities, hope our paths cross again in the world of tech. Until then, happy problem-solving!
+**Thank you** for joining me on this journey. I look forward to future challenges and opportunities, hope our paths cross again in the world of tech. Until then, happy coding!
