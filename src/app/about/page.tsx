@@ -119,7 +119,7 @@ export default function About() {
                     </div>
                 </div>
                 <p>If you’re looking for someone who not only writes clean code but also understands how to make technology work for people, I’d love to chat about how I can contribute to your team.</p>
-                <p><b>Reach me at:</b> <Link href="mailto:hello@deltaximity.com">hello@deltaximity.com</Link> or connect with me on <Link href="https://www.linkedin.com/in/hasan-ali-955aaa295/">LinkedIn</Link></p>
+                <p><b>Reach me at:</b> <Link href="mailto:hello@deltaximity.com">hello@deltaximity.com</Link> or connect with me on <Link href="https://www.linkedin.com/in/deltaximity/">LinkedIn</Link></p>
             </section>
             <SayHello />
         </>

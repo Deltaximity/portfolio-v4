@@ -18,7 +18,7 @@ export default function Footer() {
                             style={{objectFit: 'contain', height: '100%', width: 'auto'}}
                         />
                         <div className="socials">
-                            <Link href="https://www.linkedin.com/in/hasan-ali-955aaa295/"><Linkedin /></Link>
+                            <Link href="https://www.linkedin.com/in/deltaximity/"><Linkedin /></Link>
                             <Link href="mailto:hello@deltaximity.com"><Mail /></Link>
                             <Link href="https://github.com/Deltaximity"><Github /></Link>
                         </div>
