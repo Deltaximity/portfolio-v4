@@ -8,7 +8,7 @@ export default function HomePage() {
     <>
       <header className="main-hero">
         <h1>Deltaximity</h1>
-        <p className="subheading">Front-end developer that loves solving human problems with tech.</p>
+        <p className="subheading">Front-end developer who loves solving human problems with tech.</p>
         <Image 
           className="hero-lambda"
           src="/assets/img/Lambda.png"

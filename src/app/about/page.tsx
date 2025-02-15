@@ -20,7 +20,7 @@ export default function About() {
                     </div>
                     <div className="content">
                         <h2 className="h2">Hej! 🥹</h2>
-                        <p>I'm a web developer based in Sweden 🇸🇪. I have a knack for clean code, a passion for open-source software, and an eye for detail. When I'm not coding, you'll find me making music, capturing life through photography, or working on my next project—whether it's electronics, design, or solving human problems (we all have those right?).</p>
+                        <p>I'm a web developer based in Sweden 🇸🇪. I have a knack for clean code, a passion for open-source software, and an eye for detail. When I'm not coding, you'll find me making music, capturing life through photography, or working on my next project—whether it's electronics, design, or solving everyday human problems (we all have those right?).</p>
                         <p>— Hasan Ali</p>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ export default function About() {
             </section>
             <section>
                 <h2 className="h2">Right Now</h2>
-                <p>Right now, I'm refining my portfolio, experimenting with Framer Motion animations, and exploring Notion scripting to automate workflows. I'm also on a journey to balance creativity and productivity, one step at a time.</p>
+                <p>Right now, I'm refining my portfolio, experimenting with <b>Framer Motion</b> animations, and exploring <b>Notion scripting</b> to automate workflows. I'm also on a journey to balance creativity and productivity, one step at a time.</p>
             </section>
             <section id="more-about-me">
                 <h2>More about me</h2>

@@ -8,7 +8,7 @@ date: "2024"
 ---
 # Summary
 
-Hotspot is a Progressive Web App (PWA) developed using React, Express and SCSS to transform the annual job fair experience at Karlstad University. With over 8,000 students and more than 130 companies participating a 5.5-hour event, traditional printed maps and fragmented event information were inefficient, and the existing solution on their official website was confusing. I recognized the need for a digital solution that could quickly consolidate essential details into one intuitive platform. In this case study, I share my journey through the design, development, and testing phases of Hotspot, highlighting problem-solving process, challenges, and the lessons I learned along the way.
+Hotspot is a Progressive Web App (PWA) developed using **React**, **Express** and **SCSS** to transform the annual job fair experience at Karlstad University. With over 8,000 students and more than 130 companies participating a 5.5-hour event, traditional printed maps and fragmented event information were inefficient, and the existing solution on their official website was confusing. I recognized the need for a digital solution that could quickly consolidate essential details into one intuitive platform. In this case study, I share my journey through the design, development, and testing phases of Hotspot, highlighting problem-solving process, challenges, and the lessons I learned along the way.
 
 # Background
 
