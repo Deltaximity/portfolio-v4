@@ -12,7 +12,7 @@ export default function Contact() {
     return (
         <>
             <header className="blog-header">
-                <h1 className="h1">Contact</h1>
+                <h1>Contact</h1>
             </header>
             <section className="socials-section">
                 <h2>Socials</h2>

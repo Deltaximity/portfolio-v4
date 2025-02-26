@@ -25,7 +25,7 @@ export default function BlogPage() {
                 <ul className="cards">
                     {posts.map((post) => (
                         <li key={post.slug} className="card">
-                            <Link href={`/blog/${post.slug}`}>
+                            <Link href={`/projects/${post.slug}`}>
                                 <div className="image-container">
                                     <Image 
                                         src={post.image || "/assets/img/DSC00402.jpg"}
