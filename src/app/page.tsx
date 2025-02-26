@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import About from "./about/page";
+import Socials from "@/components/Socials";
 
 export default function HomePage() {
   return (
@@ -9,14 +10,13 @@ export default function HomePage() {
       <header className="main-hero">
         <h1>Deltaximity</h1>
         <p className="subheading">Front-end developer who loves solving human problems with tech.</p>
-        <Image 
-          className="hero-lambda"
-          src="/assets/img/Lambda.png"
-          alt=""
-          width={600}
-          height={600}
-          style={{objectFit: 'contain', height: 'auto', width: '660px'}}
-        />
+        <Socials size={32} strokeWidth={1.6} />
+        <div className="hero-lambda">
+          <svg className="animated-triangle" width="660" height="556" viewBox="0 0 660 556" xmlns="http://www.w3.org/2000/svg">
+            <path id="Triangle" fill="none" stroke="currentColor" strokeWidth="2" d="M 0 556 L 330 0 L 660 556 L 531.570679 556 L 330 216.383942 L 128.429321 556 L 0 556 Z"/>
+          </svg>
+          <div className="gradient"></div>
+        </div>
       </header>
       <section id="portfolio-section">
         <h2>Projects</h2>

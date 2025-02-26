@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Linkedin, Github, Instagram, Youtube, Mail } from 'lucide-react';
 import { navLinks } from "./navLinks";
-import { Heart } from 'lucide-react';
+import Socials from "./Socials";
 
 export default function Footer() {
     return (
@@ -17,11 +17,7 @@ export default function Footer() {
                             height={0}
                             style={{objectFit: 'contain', height: '100%', width: 'auto'}}
                         />
-                        <div className="socials">
-                            <Link href="https://www.linkedin.com/in/deltaximity/"><Linkedin /></Link>
-                            <Link href="mailto:hello@deltaximity.com"><Mail /></Link>
-                            <Link href="https://github.com/Deltaximity"><Github /></Link>
-                        </div>
+                        <Socials size={24} strokeWidth={2} />
                     </div>
                     <div className="links-container">
                         <div className="links">

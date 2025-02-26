@@ -16,6 +16,22 @@ header {
 
     .subheading {
         text-align: center;
+
+    .socials {
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        margin-top: 20px;
+        animation: fade-in .5s 1.6s forwards, slide-in-up .4s 1.6s forwards;
+
+        a {
+            transition: .2s;
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+
     }
 
     .hero-lambda {
