@@ -3,8 +3,9 @@ body {
     // grid-template-columns: repeat(8, 1fr);
     grid-template-columns: calc($grid-gap*2) repeat(5, 1fr) calc($grid-gap*2);
     gap: 0 26px;
-    margin: 0 40px;
+    padding: 0 $grid-gap;
     max-width: 1800px;
+    width: 100%;
     place-self: center;
 
     & > * {
@@ -141,7 +142,7 @@ footer {
 @media (max-width: $mobile-landscape) {
     body {
         grid-template-columns: repeat(2, 1fr);
-        margin: 0 20px;
+        padding: 0 20px;
     }
 
     main {

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Linkedin, Github, Instagram, Youtube, Mail } from 'lucide-react';
+import { Coffee, Heart } from 'lucide-react';
 import { navLinks } from "./navLinks";
 import Socials from "./Socials";
 
@@ -37,9 +37,9 @@ export default function Footer() {
             </div>
             <div className="credits">
                 <div className="content-wrapper fineprint">
-                    <p>Made with <Heart size={14} /> by <Link href="https://github.com/Deltaximity">Hasan Ali</Link></p>
+                    <p>Made with <Coffee size={14} /> and <Heart size={14} /> by <Link href="https://github.com/Deltaximity">Hasan Ali</Link></p>
                     <p>© Deltaximity - All rights reserved</p>
-                    <p>Version: <code>4.0.0-beta.63</code></p>
+                    <p>Version: <code>4.0.0-beta.71</code></p>
                 </div>
             </div>
         </footer>

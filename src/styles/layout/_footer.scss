@@ -18,10 +18,7 @@ footer {
                     padding-top: 20px;
                     display: flex;
                     justify-content: flex-end;
-
-                    & > * {
-                        margin-left: 10px;
-                    }
+                    gap: 10px;
                 }
             }
 

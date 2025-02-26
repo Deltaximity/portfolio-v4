@@ -20,7 +20,7 @@ export default function About() {
                     </div>
                     <div className="content">
                         <h2 className="h2">Hej! 🥹</h2>
-                        <p>I'm a web developer based in Sweden 🇸🇪. I have a knack for clean code, a passion for open-source software, and an eye for detail. When I'm not coding, you'll find me making music, capturing life through photography, or working on my next project—whether it's electronics, design, or solving everyday human problems (we all have those right?).</p>
+                        <p>I'm a web developer based in Sweden 🇸🇪. I have a knack for clean code, a passion for open-source software, and an eye for detail. When I'm not coding, you'll find me making music, capturing life through photography, or working on my next project—whether it's electronics, design, or solving everyday human problems (we all have those, right?).</p>
                         <p>— Hasan Ali</p>
                     </div>
                 </div>
@@ -105,12 +105,12 @@ export default function About() {
                     <div className="item">
                         <MonitorCheck className="icon" size={36} strokeWidth={1.5} />
                         <h3>Innovative Solutions</h3>
-                        <p>I love turning ideas into impactful, user-friendly applications (like the Hotspot App).</p>
+                        <p>I love turning ideas into impactful, user-friendly applications (like the <Link href="https://app.hotspot.kau.se/">Hotspot App</Link>).</p>
                     </div>
                     <div className="item">
                         <MessageCircleQuestion className="icon" size={36} strokeWidth={1.5} />
                         <h3>Creative Problem-Solving</h3>
-                        <p>My diverse background—from teaching to electronics—means I bring a unique perspective to every project.</p>
+                        <p>My diverse background, from teaching to photography and design, means I bring a unique perspective to every project.</p>
                     </div>
                     <div className="item">
                         <ChartSpline className="icon" size={36} strokeWidth={1.5} />
