@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/navbar';
 import '../styles/globals.scss';
 import { Syne, Inter } from "next/font/google";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 // Configure each font separately
 const syne = Syne({
@@ -25,6 +26,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   )
