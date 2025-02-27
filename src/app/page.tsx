@@ -10,7 +10,7 @@ export default function HomePage() {
       <header className="main-hero">
         <h1>Deltaximity</h1>
         <p className="subheading">Front-end developer who loves solving human problems with tech.</p>
-        <Socials size={32} strokeWidth={1.6} />
+        <Socials size={34} strokeWidth={1.5} />
         <div className="hero-lambda">
           <svg className="animated-triangle" width="660" height="556" viewBox="0 0 660 556" xmlns="http://www.w3.org/2000/svg">
             <path id="Triangle" fill="none" stroke="currentColor" strokeWidth="2" d="M 0 556 L 330 0 L 660 556 L 531.570679 556 L 330 216.383942 L 128.429321 556 L 0 556 Z"/>
