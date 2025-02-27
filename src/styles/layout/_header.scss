@@ -29,8 +29,29 @@ header {
 
         a {
             transition: .1s;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 110%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 5px;
+                width: 70%;
+                background-color: $color-primary;
+                // border: 2px solid $color-text;
+                border-radius: $radius-small;
+                // display: none;
+                opacity: 0;
+                transition: .2s;
+            }
+
             &:hover {
-                color: $color-primary;
+                transform: translateY(-10%);
+                &::before {
+                    opacity: 1;
+                }
             }
         }
     }
@@ -77,23 +98,23 @@ header {
             z-index: -1;
             left: 50%;
             bottom: 50%;
-            transform: scale(2);
+            transform: scale(4);
             pointer-events: none;
             animation: fade-in .5s 1.5s forwards;
             opacity: 0;
+        }
 
-            &::after {
-                content: '';
-                background: url("../../../public/assets/img/noise.png") repeat;
-                width: 200%;
-                height: 200%;
-                // mix-blend-mode: multiply;
-                image-rendering: pixelated;
-                transform: scale(.5);
-                position: absolute;
-                top: -50%;
-                left: -50%;
-            }
+        &::after {
+            content: '';
+            background: url("../../../public/assets/img/noise.png") repeat;
+            width: 200%;
+            height: 200%;
+            // mix-blend-mode: multiply;
+            image-rendering: pixelated;
+            transform: scale(.5);
+            position: absolute;
+            top: -50%;
+            left: -50%;
         }
     }
 }
