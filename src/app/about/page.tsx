@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Camera, ChartSpline, KeyboardMusic, MessageCircleQuestion, Microchip, MonitorCheck } from "lucide-react";
+import { Camera, ChartSpline, KeyboardMusic, Lightbulb, Microchip, MonitorCheck } from "lucide-react";
 import SayHello from "@/components/SayHello";
 
 export default function About() {
@@ -26,21 +26,25 @@ export default function About() {
                 </div>
             </section>
             <section id="at-work">
-                <h2 className="h2">Me at Work</h2>
+                <h2>Me at Work</h2>
                 <div className="container">
                     <div className="item">
-                        <h3>Problem-Solving is ❤️</h3>
+                        <h3>Problem-Solving</h3>
                         <p>I thrive on problem-solving. Whether it's debugging code, crafting interactive experiences, or figuring out how to make a noise overlay pixel-perfect in Next.js (yes, really). I believe in creating things that are not only functional but also meaningful, intuitive, and a joy to use.</p>
                     </div>
                     <div className="item">
                         <h3>Reducing Friction</h3>
-                        <p><i>When you're working on a task, and you find it <strong>difficult</strong> to do... do you wonder if it's something to do with you, or something to do with the tool you're using?</i></p>
-                        <p>My job is to minimize friction of using the tools, so that you can work on what really matters.</p>
+                        <p>I design and develop with usability in mind, ensuring that tools and interactions feel seamless—so you can focus on what really matters, instead of wrestling with the interface (I've been there too).</p>
                     </div>
                     <div className="item">
                         <h3>Thinking in Systems</h3>
-                        <p>The bigger picture, connecting the dots. How does one very specific feature work and interact with other features in the system?</p>
+                        <p>I focus on the bigger picture, connecting the dots. How does one very specific feature work and interact with other features in the system?</p>
                         <p>I like to build things that evolve into one cohesive system. A system that not only works seamlessly but also feels intuitive and meaningful to those who use it.</p>
+                    </div>
+                    <div className="item">
+                        <h3>Attention to Detail</h3>
+                        <p>I notice the little things, down to the pixel. Minor things that may be overlooked, I refine to create a smoother, more intuitive experience, especially in interactive elements.</p>
+                        <p><i>Psst, a challenge for you: Can you spot the tiny details hidden in this website? </i>😉</p>
                     </div>
                 </div>
             </section>
@@ -108,7 +112,7 @@ export default function About() {
                         <p>I love turning ideas into impactful, user-friendly applications (like the <Link href="https://app.hotspot.kau.se/">Hotspot App</Link>).</p>
                     </div>
                     <div className="item">
-                        <MessageCircleQuestion className="icon" size={36} strokeWidth={1.5} />
+                        <Lightbulb className="icon" size={36} strokeWidth={1.5} />
                         <h3>Creative Problem-Solving</h3>
                         <p>My diverse background, from teaching to photography and design, means I bring a unique perspective to every project.</p>
                     </div>
