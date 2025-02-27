@@ -34,7 +34,7 @@ export default function About() {
                     </div>
                     <div className="item">
                         <h3>Reducing Friction</h3>
-                        <p>I design and develop with usability in mind, ensuring that tools and interactions feel seamless—so you can focus on what really matters, instead of wrestling with the interface (I've been there too).</p>
+                        <p>I design and develop with usability in mind, ensuring that tools and interactions feel seamless—so you can focus on what really matters, instead of wrestling with the interface (I've been there too 😅).</p>
                     </div>
                     <div className="item">
                         <h3>Thinking in Systems</h3>
@@ -71,7 +71,7 @@ export default function About() {
                         <ul>
                             <li>Guitars: Yamaha Pacifica 112, Epiphone Acoustic Guitar, Amada Classical Guitar</li>
                             <li>Piano: M-audio Keystation 61 mk3</li>
-                            <li>Guitar amp: Marshall GX30</li>
+                            <li>Guitar amp: Marshall MG30FX</li>
                             <li>Audio unit: Focusrite Scarlett Solo 3rd Gen</li>
                             <li>Mic: Fifine T669</li>
                         </ul>
