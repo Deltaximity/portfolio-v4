@@ -115,6 +115,8 @@ header {
             position: absolute;
             top: -50%;
             left: -50%;
+            animation: fade-in .5s 1.5s forwards;
+            opacity: 0;
         }
     }
 }
@@ -136,20 +138,27 @@ header {
         width: 80%;
     }
 
-    &::before {
+    &::before, &::after {
         content: '';
-        background: url("../../../public/assets/img/noise.png") repeat,
-            conic-gradient($color-gray 40%, $color-primary, $color-secondary, $color-bg);
         width: 100%;
         height: 100%;
         position: absolute;
         z-index: -1;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    &::before {
+        background: conic-gradient($color-gray 40%, $color-primary, $color-secondary, $color-bg);
         left: 50%;
         bottom: 50%;
         transform: scale(2);
         mix-blend-mode: multiply;
+    }
+
+    &::after {
+        background: url("../../../public/assets/img/noise.png") repeat;
         image-rendering: pixelated;
-        pointer-events: none;
     }
 
     .mask {
