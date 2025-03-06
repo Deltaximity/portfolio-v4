@@ -29,8 +29,8 @@ export default function Footer() {
                         <div className="links">
                             <h4>Projects</h4>
                             <Link href="/projects/hotspot-app"><p>Hotspot App</p></Link>
+                            <Link href="/projects/my-portfolio-website"><p>My Portfolio Website</p></Link>
                             <Link href="/"><p>Automated Workflows in macOS</p></Link>
-                            <Link href="/"><p>Designing an Efficient Desk Setup</p></Link>
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@ export default function Footer() {
                 <div className="content-wrapper fineprint">
                     <p>Made with <Coffee size={14} /> and <Heart size={14} /> by <Link href="https://github.com/Deltaximity">Hasan Ali</Link></p>
                     <p>© Deltaximity - All rights reserved</p>
-                    <p>Version: <code>4.0.0-beta.71</code></p>
+                    <p>Version: <code>4.0.0-beta.81</code></p>
                 </div>
             </div>
         </footer>

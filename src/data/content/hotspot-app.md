@@ -96,7 +96,7 @@ We chose these technologies based on criteria such as:
 The visual design was crafted by our UI/UX designer through brainstorming sessions and collaborative workshops with the development team. The user interface underwent several revisions and prototype discussions with the Hotspot team before arriving at the final design.
 
 ![Four mockup interfaces showcasing the Hotspot app](/assets/blog/images/blog-hotspot-prototypes.jpeg)
-*Final revisions of the app design proposed by our designer.*
+Final revisions of the app design proposed by our designer.
 
 ## Development
 We held multiple workshops with our designer to finalize the design and ensure it was achievable in code. This phase helped us identify and address any inconsistencies or complications early on.
