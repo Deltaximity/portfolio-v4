@@ -4,6 +4,8 @@
 
     &:has(.post-image) {
       color: $color-gray;
+      font-style: italic;
+      font-size: $fontsize-fineprint;
     }
   }
 }
