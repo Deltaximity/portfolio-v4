@@ -43,7 +43,7 @@ export default function About() {
                     </div>
                     <div className="item">
                         <h3>Attention to Detail</h3>
-                        <p>I notice the little things, down to the pixel. Minor things that may be overlooked, I refine to create a smoother, more intuitive experience, especially in interactive elements.</p>
+                        <p>I notice the little things, down to the pixel. Minor things that may be overlooked, I refine and create smoother, more intuitive experiences, especially in interactive elements.</p>
                         <p><i>Psst, a challenge for you: Can you spot the tiny details hidden in this website? </i>😉</p>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ export default function About() {
                 <div className="container">
                     <p>I come from a diverse background, both culturally and technically. Over the years I've learned and adopted different viewpoints and approaches to human problems and design, and I'm constantly improving and adapting my approaches. <strong>Forever a learner</strong>.</p>
                     <p>I have a background in <b>teaching</b> and <b>tutoring</b>. How do you teach—let alone communicate with—someone who doesn't speak the language? This is like a developer talking in technical terms to regular people. It's all about breaking down complex concepts into simple, relatable, human terms that even a 5 year-old can understand.</p>
-                    <p>I started learning HTML back when I was 15. I loved learning and experimenting with code at the time and continued my web dev journey since. I love front-end dev and working with technologies like <b>React</b>, <b>TypeScript</b> and <b>SCSS</b>.</p>
+                    <p>I started learning HTML back when I was 15. I loved learning and experimenting with code at the time and continued my web dev journey since. I love fullstack dev and working with technologies like <b>React/Next.js</b>, <b>TypeScript</b> and <b>SCSS</b>.</p>
                 </div>
             </section>
             <section>
@@ -83,7 +83,7 @@ export default function About() {
                         <p>I love photography, especially capturing nature and cityscapes 🌿.</p>
                         <h4>Gear</h4>
                         <ul>
-                            <li>Cameras: Sony α7ii, Sony α3000</li>
+                            <li>Cameras: Sony a7ii, Sony a3000</li>
                             <li>Lenses:
                                 <ul>
                                     <li>Samyang AF 24mm f/1.8</li>
@@ -98,12 +98,23 @@ export default function About() {
                         <Microchip className="icon" size={36} strokeWidth={1.5} />
                         <h3>Electronics</h3>
                         <p>I enjoy working with electronics, from soldering items to coding automated scripts. Yes, if a <i>very specific</i> problem needs a <i>very specific</i> solution, I'll go out of my way to make my own.</p>
+                        <h4>Gear</h4>
+                        <ul>
+                            <li>Boards: Arduino R3</li>
+                            <li>Tools:
+                                <ul>
+                                    <li>Soldering Kit</li>
+                                    <li>UNI-T UT131D Multimeter</li>
+                                    <li>Various components</li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
             <section id="get-in-touch">
                 <h2>Get in touch</h2>
-                <p>I'm a front-end developer who's passionate about transforming complex challenges into clean intuitive digital experiences. I thrive on solving real human problems with tech, whether it's crafting intuitive UIs or building cohesive systems from scratch.</p>
+                <p>I'm a fullstack developer who's passionate about transforming complex challenges into clean intuitive digital experiences. I thrive on solving real human problems with tech, whether it's crafting intuitive UIs or building cohesive systems from scratch.</p>
                 <h3>Why Reach Out?</h3>
                 <div className="container">
                     <div className="item">
