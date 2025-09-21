@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Github, Instagram, Youtube, Linkedin } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import SayHello from "@/components/SayHello";
 
 export const metadata = {
@@ -23,9 +23,8 @@ export default function Contact() {
                 <h2>Socials</h2>
                 <div className="container">
                     <Link href="https://github.com/Deltaximity"><Github {...iconProps} /></Link>
-                    <Link href="/"><Instagram {...iconProps} /></Link>
-                    <Link href="/"><Youtube {...iconProps} /></Link>
-                    <Link href="/"><Linkedin {...iconProps} /></Link>
+                    <Link href="mailto:hasali02@outlook.com"><Mail {...iconProps} /></Link>
+                    <Link href="https://www.linkedin.com/in/deltaximity/"><Linkedin {...iconProps} /></Link>
                 </div>
             </section>
             <SayHello />

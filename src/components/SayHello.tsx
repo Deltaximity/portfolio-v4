@@ -19,6 +19,7 @@ export default function SayHello() {
             <p className="h3">Ali</p>
         </div>
         <Link href="mailto:hello@deltaximity.com" className="primary-button"><Mail size={20} />hello@deltaximity.com</Link>
+        <p>Let's create something <strong>impactful</strong> together.</p>
     </section>
     </>
   )

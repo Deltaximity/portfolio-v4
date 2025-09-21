@@ -33,15 +33,16 @@ export default function HomePage() {
             <div className="content">
               <div>
                 <h3>Hotspot App</h3>
-                <p>My most ambitious project to date. Designed from the ground up. A PWA app that contributes to the technological advancement of <Link href="https://hotspot.kau.se/">Hotspot</Link> under <Link href="https://www.kau.se/">Karlstad University</Link>. Annually helping over 8000 students connect with employers at the Hotspot job fair.</p>
+                <p>My most ambitious project to date. Designed from the ground up. A PWA app that contributes to the technological advancement of <Link href="https://hotspot.kau.se/">Hotspot</Link> under <Link href="https://www.kau.se/">Karlstad University</Link>. Annually helping over 8000 students connect with employers at Sweden's largest university job fair.</p>
               </div>
               <div className="links">
-                <Link href="/projects/hotspot-app" className="secondary-button">View project</Link>
-                <Link href="https://app.hotspot.kau.se" className="primary-button">Visit website</Link>
+                <Link href="/projects/hotspot-app" className="secondary-button">Read Case</Link>
+                {/* <Link href="https://app.hotspot.kau.se" className="secondary-button">Live App</Link> */}
+                <Link href="https://hotspot-app.deltaximity.com" className="primary-button">View Demo</Link>
               </div>
             </div>
           </div>
-          {/* <div className="project">
+          <div className="project">
             <Image 
               className="cover"      
               src="/assets/img/mockup3.webp"
@@ -56,11 +57,11 @@ export default function HomePage() {
                 <p>Design revisions, complete overhauls, rethinking portfolio websites from the perspective of a creator and web developer. Dive deeper into the history and thought process behind my portfolio website.</p>
               </div>
               <div className="links">
-                <Link href="/blog/my-portfolio-website" className="secondary-button">View project</Link>
+                <Link href="/blog/my-portfolio-website" className="secondary-button">Learn More</Link>
               </div>
             </div>
           </div>
-          <div className="project">
+          {/* <div className="project">
             <Image 
               className="cover"
               src="/assets/img/IMG_2887.webp"
@@ -104,7 +105,7 @@ export default function HomePage() {
             <div className="container">
               <Image 
                 className="cover"
-                src="/assets/img/mockup3.webp"
+                src="/assets/img/DSC01479.JPG"
                 alt=""
                 width={600}
                 height={0}

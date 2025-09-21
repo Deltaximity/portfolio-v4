@@ -30,7 +30,6 @@ export default function Footer() {
                             <h4>Projects</h4>
                             <Link href="/projects/hotspot-app"><p>Hotspot App</p></Link>
                             <Link href="/projects/my-portfolio-website"><p>My Portfolio Website</p></Link>
-                            <Link href="/"><p>Automated Workflows in macOS</p></Link>
                         </div>
                     </div>
                 </div>

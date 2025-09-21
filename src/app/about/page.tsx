@@ -25,7 +25,8 @@ export default function About() {
                     </div>
                     <div className="content">
                         <h2 className="h2">Hej! 🥹</h2>
-                        <p>I'm a web developer based in Sweden 🇸🇪. I have a knack for clean code, a passion for open-source software, and an eye for detail. When I'm not coding, you'll find me making music, capturing life through photography, or working on my next project—whether it's electronics, design, or solving everyday human problems (we all have those, right?).</p>
+                        <p>I'm Hasan, a web developer based in Sweden 🇸🇪. I have a knack for clean code, a passion for open-source software, and an eye for detail.</p>
+                        <p>When I'm not coding, you'll find me making music, capturing life through photography, or working on my next project—whether it's electronics, design, or solving everyday human problems (we all have those, right?).</p>
                         <p>— Hasan Ali</p>
                     </div>
                 </div>
@@ -57,7 +58,7 @@ export default function About() {
                 <h2 className="h2">Background</h2>
                 <div className="container">
                     <p>I come from a diverse background, both culturally and technically. Over the years I've learned and adopted different viewpoints and approaches to human problems and design, and I'm constantly improving and adapting my approaches. <strong>Forever a learner</strong>.</p>
-                    <p>I have a background in <b>teaching</b> and <b>tutoring</b>. How do you teach—let alone communicate with—someone who doesn't speak the language? This is like a developer talking in technical terms to regular people. It's all about breaking down complex concepts into simple, relatable, human terms that even a 5 year-old can understand.</p>
+                    <p>I have a background in <b>teaching</b> and <b>tutoring</b>. I can communicate complex ideas in simple, relatable terms.</p>
                     <p>I started learning HTML back when I was 15. I loved learning and experimenting with code at the time and continued my web dev journey since. I love fullstack dev and working with technologies like <b>React/Next.js</b>, <b>TypeScript</b> and <b>SCSS</b>.</p>
                 </div>
             </section>
