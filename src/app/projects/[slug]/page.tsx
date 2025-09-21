@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const { slug } = await params;
     const post = await getPostBySlug(slug);
     if (!post) return { title: 'Post Not Found' };
-    return { title: post.metadata.title };
+    return { title: `Deltaximity – ${post.metadata.title}` };
 }
 
 // src/app/blog/[slug]/page.tsx

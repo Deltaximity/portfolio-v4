@@ -6,6 +6,18 @@ import '../styles/globals.scss';
 import { Syne, Inter } from "next/font/google";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
+export const metadata = {
+  title: {
+    default: 'Deltaximity',
+    template: 'Deltaximity – %s',
+  },
+  description: 'Welcome to my portfolio! I am a fullstack developer specializing in React, Next.js, TypeScript, and SCSS. Explore my projects and get in touch!',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
+};
+
 // Configure each font separately
 const syne = Syne({
   weight: ['400', '700'],

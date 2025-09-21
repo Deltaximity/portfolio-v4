@@ -3,6 +3,11 @@ import Image from "next/image";
 import { Github, Instagram, Youtube, Linkedin } from "lucide-react";
 import SayHello from "@/components/SayHello";
 
+export const metadata = {
+    title: 'Contact',
+    description: 'Get in touch with Hasan Ali, a fullstack developer based in Sweden. Explore his social media profiles and reach out for collaborations or inquiries.',
+}
+
 export default function Contact() {
     const iconProps = {
         size: 50,

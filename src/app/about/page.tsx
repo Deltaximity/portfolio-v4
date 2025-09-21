@@ -3,6 +3,11 @@ import Link from "next/link";
 import { Camera, ChartSpline, KeyboardMusic, Lightbulb, Microchip, MonitorCheck } from "lucide-react";
 import SayHello from "@/components/SayHello";
 
+export const metadata = {
+    title: 'About',
+    description: 'Learn more about Hasan Ali, a fullstack developer based in Sweden. Discover his background, skills, and passions in web development, music, photography, and electronics.',
+}
+
 export default function About() {
     return (
         <>
