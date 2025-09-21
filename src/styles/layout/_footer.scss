@@ -24,6 +24,9 @@ footer {
 
             .links-container {
                 display: flex;
+                justify-content: flex-start;
+                width: 50%;
+
                 .links {
                     margin-left: calc($grid-gap * 4);
                 }
@@ -86,9 +89,10 @@ footer {
 
                 .links-container {
                     width: 100%;
-                    justify-content: space-between;
+                    // justify-content: space-between;
 
                     .links {
+                        flex: 1;
                         margin-left: 0;
                     }
                 }

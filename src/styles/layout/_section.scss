@@ -100,6 +100,7 @@
             position: absolute;
             
             &:first-child {
+                text-align: left;
                 width: 200%;
                 left: 20px;
             }
@@ -127,6 +128,10 @@
         svg {
             margin-right: 5px;
         }
+    }
+
+    p {
+        text-align: center;
     }
 }
 

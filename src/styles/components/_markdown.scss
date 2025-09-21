@@ -47,11 +47,11 @@ blockquote {
   position: relative;
   // background-color: $color-secondary;
   margin: 0;
-  padding: 0 $grid-gap;
+  padding-left: $grid-gap;
   // line-height: 1.5;
 
   p {
-    color: darken($color: $color-gray, $amount: 20);
+    // color: $color-gray;
   }
 
   &::before {
@@ -60,7 +60,7 @@ blockquote {
     top: 0;
     left: 0;
     height: 100%;
-    width: 5px;
+    width: 4px;
     background-color: $color-gray;
   }
 }
@@ -95,6 +95,10 @@ table {
       display: none;
     }
   }
+}
+
+ul, ol {
+  padding-inline-start: 30px;
 }
 
 @media (max-width: $tablet-landscape) {
