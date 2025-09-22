@@ -57,7 +57,7 @@ export default function HomePage() {
                 <p>Design revisions, complete overhauls, rethinking portfolio websites from the perspective of a creator and web developer. Dive deeper into the history and thought process behind my portfolio website.</p>
               </div>
               <div className="links">
-                <Link href="/blog/my-portfolio-website" className="secondary-button">Learn More</Link>
+                <Link href="/projects/my-portfolio-website" className="secondary-button">Learn More</Link>
               </div>
             </div>
           </div>
