@@ -1,11 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Camera, ChartSpline, KeyboardMusic, Lightbulb, Microchip, MonitorCheck } from "lucide-react";
+import { Camera, ChartSpline, KeyboardMusic, Lightbulb, Microchip, MonitorCheck, MonitorCog, Wallpaper } from "lucide-react";
 import SayHello from "@/components/SayHello";
 
 export const metadata = {
     title: 'About',
     description: 'Learn more about Hasan Ali, a fullstack developer based in Sweden. Discover his background, skills, and passions in web development, music, photography, and electronics.',
+}
+
+const iconProps = {
+    size: 36,
+    strokeWidth: 1.5
 }
 
 export default function About() {
@@ -28,6 +33,21 @@ export default function About() {
                         <p>I'm Hasan, a web developer based in Sweden 🇸🇪. I have a knack for clean code, a passion for open-source software, and an eye for detail.</p>
                         <p>When I'm not coding, you'll find me making music, capturing life through photography, or working on my next project—whether it's electronics, design, or solving everyday human problems (we all have those, right?).</p>
                         <p>— Hasan Ali</p>
+                    </div>
+                </div>
+            </section>
+            <section id="what-i-do">
+                <h2>What I do</h2>
+                <div className="container">
+                    <div className="item">
+                        <MonitorCog className="icon" {...iconProps} />
+                        <h3>Web Development</h3>
+                        <p>I build efficient and scalable web applications.</p>
+                    </div>
+                    <div className="item">
+                        <Wallpaper className="icon" {...iconProps} />
+                        <h3>Design</h3>
+                        <p>I create visually appealing and user-friendly designs.</p>
                     </div>
                 </div>
             </section>
@@ -54,23 +74,23 @@ export default function About() {
                     </div>
                 </div>
             </section>
-            <section>
-                <h2 className="h2">Background</h2>
+            <section id="background-section">
                 <div className="container">
-                    <p>I come from a diverse background, both culturally and technically. Over the years I've learned and adopted different viewpoints and approaches to human problems and design, and I'm constantly improving and adapting my approaches. <strong>Forever a learner</strong>.</p>
-                    <p>I have a background in <b>teaching</b> and <b>tutoring</b>. I can communicate complex ideas in simple, relatable terms.</p>
+                    <h2 className="h2">Background</h2>
                     <p>I started learning HTML back when I was 15. I loved learning and experimenting with code at the time and continued my web dev journey since. I love fullstack dev and working with technologies like <b>React/Next.js</b>, <b>TypeScript</b> and <b>SCSS</b>.</p>
+                    <p>I have a background in <b>teaching</b> and <b>tutoring</b>. I can communicate complex ideas in simple, relatable terms.</p>
+                    <p>Over the years I've learned and adopted new viewpoints and approaches to human problems and design, and I'm constantly improving and adapting my approaches. <strong>Forever a learner</strong>.</p>
                 </div>
-            </section>
-            <section>
-                <h2 className="h2">Right Now</h2>
-                <p>Right now, I'm refining my portfolio, experimenting with <b>Framer Motion</b> animations, and exploring <b>Notion scripting</b> to automate workflows. I'm also on a journey to balance creativity and productivity, one step at a time.</p>
+                <div className="container">
+                    <h2 className="h2">Right Now</h2>
+                    <p>Right now, I'm refining my portfolio, experimenting with <b>Framer Motion</b> animations, and exploring <b>Notion scripting</b> to automate workflows. I'm also on a journey to balance creativity and productivity, one step at a time.</p>
+                </div>
             </section>
             <section id="more-about-me">
                 <h2>More about me</h2>
                 <div className="container">
                     <div className="item">
-                        <KeyboardMusic className="icon" size={36} strokeWidth={1.5} />
+                        <KeyboardMusic className="icon" {...iconProps} />
                         <h3>Music</h3>
                         <p>I play guitar and piano. I also record and create a lot of music on GarageBand, Logic X, and Ableton Live. Est. 2016.</p>
                         <h4>Gear</h4>
@@ -84,7 +104,7 @@ export default function About() {
                         <p></p>
                     </div>
                     <div className="item">
-                        <Camera className="icon" size={36} strokeWidth={1.5} />
+                        <Camera className="icon" {...iconProps} />
                         <h3>Photography</h3>
                         <p>I love photography, especially capturing nature and cityscapes 🌿.</p>
                         <h4>Gear</h4>
@@ -101,7 +121,7 @@ export default function About() {
                         </ul>
                     </div>
                     <div className="item">
-                        <Microchip className="icon" size={36} strokeWidth={1.5} />
+                        <Microchip className="icon" {...iconProps} />
                         <h3>Electronics</h3>
                         <p>I enjoy working with electronics, from soldering items to coding automated scripts. Yes, if a <i>very specific</i> problem needs a <i>very specific</i> solution, I'll go out of my way to make my own.</p>
                         <h4>Gear</h4>

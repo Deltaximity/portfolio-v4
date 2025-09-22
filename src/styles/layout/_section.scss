@@ -152,11 +152,13 @@
 
         .content {
             flex: 2;
+            // max-width: 800px;
+            // margin: 0 auto;
         }
     }
 }
 
-#at-work, #more-about-me, #get-in-touch {
+#what-i-do, #at-work, #more-about-me, #get-in-touch {
     h3 {
         margin-top: $grid-gap;
     }
@@ -174,6 +176,12 @@
             border-radius: $radius-big;
         }
     }
+}
+
+#background-section, #about-me {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 section h2 {
