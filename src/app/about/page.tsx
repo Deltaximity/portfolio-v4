@@ -14,7 +14,7 @@ export default function About() {
             <section id="about-me">
                 <h2 className="h1">About me</h2>
                 <div className="container">
-                    <div className="image-container">
+                    {/* <div className="image-container">
                         <Image 
                             src="/assets/img/DSC00402.jpg"
                             alt="Leaves"
@@ -22,7 +22,7 @@ export default function About() {
                             sizes="50vw"
                             style={{ objectFit: "cover" }}
                             />
-                    </div>
+                    </div> */}
                     <div className="content">
                         <h2 className="h2">Hej! 🥹</h2>
                         <p>I'm Hasan, a web developer based in Sweden 🇸🇪. I have a knack for clean code, a passion for open-source software, and an eye for detail.</p>
