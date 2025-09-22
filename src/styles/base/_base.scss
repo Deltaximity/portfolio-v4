@@ -9,3 +9,8 @@ body {
     background-color: $color-bg;
     overflow-x: hidden;
 }
+
+::selection {
+    background-color: $color-primary;
+    color: $color-text;
+}
