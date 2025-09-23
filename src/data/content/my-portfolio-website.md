@@ -72,10 +72,10 @@ Using Framer Motion hasn't been smooth, as it goes against Next.js' SSR nature. 
 I've resorted to standard `@keyframes` animations for now until I find a solution that computes locally but doesn't require the component to run on client.
 
 ### 2. Custom Markdown rendering for consistent design
-I've defined my own custom styles for handling markdown content. It's great, it's fast, but it has its limitations. I'm looking to expand its functionality in the future, such as having **split-column** views instead of using tables.
+I've defined my own custom styles for handling markdown content. It's great, it's fast, but it has its limitations. I'm looking to expand its functionality in the future, such as having **split-column** views instead of relying on tables.
 
 ### 3. Preventing blurry images
-This one was confusing to get the hang of at first, but wow it's a game-changer! Next.js handles images differently than what I'm used to before, but wow the performance gains and data savings are real.
+This one was confusing to get the hang of at first, but wow it's a game-changer! Next.js handles images differently than what I'm used to before, but the performance gains and data savings are real.
 
 # Features
 

@@ -8,7 +8,7 @@ date: "2024"
 ---
 # Summary
 
-Hotspot is a Progressive Web App (PWA) developed using **React**, **Express** and **SCSS** to transform the annual job fair experience at Karlstad University. With over 8,000 students and more than 130 companies participating a 5.5-hour event, traditional printed maps and fragmented event information were inefficient, and the existing solution on their official website was confusing. I recognized the need for a digital solution that could quickly consolidate essential details into one intuitive platform. In this case study, I share my journey through the design, development, and testing phases of Hotspot, highlighting problem-solving process, challenges, and the lessons I learned along the way.
+Hotspot App is a Progressive Web App (PWA) built with **React**, **Express** and **SCSS** to transform the annual job fair experience at Karlstad University. With over 8,000 students and 130 companies participating a 5.5-hour event, traditional maps and fragmented information were inefficient. I co-developed a digital solution that consolidates essential details into one intuitive platform, helping students find suitable employers. This case study details my journey through the design, development, and testing, highlighting problem-solving challenges, and lessons learned.
 
 # Background
 
@@ -22,16 +22,16 @@ To summarize, we see clear problems from three sides:
 | Resource-intensive logistics | Confusing navigation with printed maps | Booths in less visible areas recieved fewer visitors |
 | Unauthorized students attending | Lack of company information | Struggled to attract the right students |
 
-To address these concerns, Hotspot needed an innovative matchmaking solution that could bridge the gap between students and companies. They turned to the web development program at Karlstad University, inviting students to design and develop a digital solution for the event.
+To address these concerns, Hotspot needed an innovative matchmaking solution that could bridge the gap between students and companies. They invited Karlstad University web dev students to design and develop a digital solution for the event.
 
-I joined the Hotspot project team in 2023 during my university studies, taking charge of planning and development alongside a team of three people. Two web developers (including myself) and one UI/UX-designer.
+In 2023, I joined the Hotspot project team during my studies, leading planning and development with a team of three: two developers and one designer.
 
 # Objectives
 
-The **Hotspot app** was designed to directly address the challenges faced by students, companies, and the Hotspot team:
-1. Match students with the right companies.
+The **Hotspot app** aims to solve the challenges faced by students, companies, and the Hotspot team:
+1. Match students with suitable companies.
 1. Ensure companies receive recognition, regardless of booth placement.
-1. Enhance the user experience through a smooth intuitive event navigation system.
+1. Provide a smooth, intuitive event navigation system.
 1. Reduce logistical strain on the Hotspot team.
 
 # Understanding User Needs
@@ -39,14 +39,12 @@ The **Hotspot app** was designed to directly address the challenges faced by stu
 Before development began, we focused on **understanding the problem itself**, what students were looking for, what companies had to offer, and how we could bridge the gap effectively. Rather than conducting formal studies, we relied on firsthand experience and available data to identify pain points and inform our technical decisions.
 
 ## Challenges
-The event only lasts 5.5 hours on a single day per year, making efficiency crucial. Students struggled to locate companies suited to their field, leading to missed opportunities. Companies had diverse offerings but lacked a way to effectively match with the right students. The event format was limiting, without a structured way to explore industries and roles, many participants navigated the fair at random.
-
-1. The event is only 5.5 hours
+1. Limited event duration (5.5 hours)
 1. Existing solutions were confusing and inefficient.
 1. A lot of students navigated the event at random.
 
-## Industries & Roles
-To understand the range of opportunities available, we categorized the industries and roles companies provided:
+## Event Offerings
+To understand the range of opportunities available for students, we consolidated what companies offered:
 
 | Industries | Roles |
 |------------|-------|
@@ -58,7 +56,7 @@ To understand the range of opportunities available, we categorized the industrie
 | Music, dance and culture | Internship |
 | Social sciences and humanities | Membership |
 
-Addtionally, we looked into other data points such as:
+Addtionally, we looked at other data points such as:
 - Company locations
 - Additional information companies provided
 - Booth location at the event
@@ -66,42 +64,41 @@ Addtionally, we looked into other data points such as:
 These points shaped the **core functionality** of the Hotspot app, to directly address the root problems and help students find the right companies.
 
 # Design and Development Process
-The development of the app incorprated some Agile elements and was planned entirely by me to ensure delivery on time with the intended features and a polished end product.
+The app's development incorprated some Agile elements, planned by me to ensure timely delivery with the intended features and a polished end product.
 
 ## Planning
-During the planning phase, we laid out the foundation of the project, by evaluating which frameworks to use, dividing tasks, and distinguishing between 'core' vs 'ideal' features.
+During planning phase, we evaluated frameworks, divided tasks, and distinguished between 'core' vs 'ideal' features.
 
-> **Core Feature**: An essential functionality necessary to achieve the app’s goals, backed by logical reasoning and careful consideration.
+> **Core Feature**: Essential functionality for achieving the app’s goals, backed by reasoning and careful consideration.
 
-> **Ideal Feature**: A desirable functionality that would enhance the app, though not strictly necessary.
+> **Ideal Feature**: Desirable functionality that enhances the app but isn't strictly necessary.
 
 ### Project Management Tools
-`Notion` was used for most of the project management within the development team, for keeping track of progress, meetings, and development of the app. This is also where we did all the documentation for future Hotspot members who will be maintaining this app. For the rest of the Hotspot team, `Podio` was used for management (see how we utilized this under the *Development* section).
+- `Notion` – Used for tracking progress, meetings, and app development. Also used for documentation for future Hotspot devs.
+- `Podio` – Used for management by the rest of Hotspot team (see how utilized this under *Development* section below).
 
 ![Screenshot of Notion in Timeline view](/assets/blog/images/blog-hotspot-notion.png)
 
 ### Technology Considerations
-Early experimentation helped us identify the best technologies for our needs. While we explored options like Capacitor with the Ionic library and Expo for converting React code into React Native for more native-like features on mobile, we ultimately settled on `React` for frontend and `Express` for backend (see *Development* section for more details). 
+We experimented with various technologies, including Capacitor with Ionic and Expo for React Native (for native-like features on mobile), but ultimately landed on `React` for the frontend and `Express` for the backend.
 
-We chose these technologies based on criteria such as:
+Our decision was based on:
 
-- **Ease of use** - Developer-friendly framework.
-- **Learning curve** - Minimal learning curve for quicker development process.
-- **Maintainability** - Easily maintainable for future developers working on this app.
-- **Modularity** - Modular and expandable, having both scalabilty and flexibility in mind for potential future uses of the app.
-- **Device support** - Consistent performance and predictable behavior across iOS, Android, and more.
-- **Resource usage** - Efficient in battery, bandwidth, and overall performance.
+- **Ease of use** – Developer-friendly framework.
+- **Learning curve** – Minimal learning curve for quicker development.
+- **Maintainability** – Easily maintainable for future developers.
+- **Modularity** – Modular and expandable, having both scalabilty and flexibility in mind.
+- **Device support** – Consistent performance and predictable behavior across iOS, Android, and other devices.
+- **Resource usage** – Efficient in battery, bandwidth, and overall performance.
 
 ## Design
-The visual design was crafted by our UI/UX designer through brainstorming sessions and collaborative workshops with the development team. The user interface underwent several revisions and prototype discussions with the Hotspot team before arriving at the final design.
+The visual design was created by our UI/UX designer through brainstorming workshops with the dev team. The user interface revised and prototyped with the Hotspot team before landing on the final design.
 
 ![Four mockup interfaces showcasing the Hotspot app](/assets/blog/images/blog-hotspot-prototypes.jpeg)
 Final revisions of the app design proposed by our designer.
 
 ## Development
-We held multiple workshops with our designer to finalize the design and ensure it was achievable in code. This phase helped us identify and address any inconsistencies or complications early on.
-
-During development, we used `Github` for version control, and set up standardized procedures for naming, documentation, and code practices to ensure consistency and quality throughout the project.
+We held several workshops with our designer to finalize the design and ensure it was achievable in code. We used `Github` for version control, and set up standardized procedures for naming, documentation, and code practices.
 
 ### Tech Stack
 - `React` - For frontend. Chosen for its flexibility and future-proofing of the app. We were already familiar with React so it was easier to get started.
@@ -167,12 +164,12 @@ Despite the limited data, both students and team members have found the app incr
 On a personal note, I found the app so effective and intuitive that I kept coming back to it. Its seamless functionality truly underscored the purpose it was designed to serve.
 
 ## Room for Future Enhancements
-While the feedback has been positive and there's wasn't any stability issues, we did encounter a major issue with updating the images in the frontend. The limited time for testing and marketing had led the team into a crunch time, and the app couldn't reach a large enough user base. Of course, this is the first iteration of the app and there will be more future updates from the team. These experiences have provided valuable insights for future improvements.
+While the feedback was positive and there was no stability issues, we faced a major problem with updating images in the frontend. Due to limited time for testing and marketing, the app couldn't reach a large enough user base. This is the first iteration, and there will be more future updates. These experiences have provided valuable insights for me and future vision of Hotspot.
 
 # Conclusion
-The Hotspot app has emerged as a vital digital solution for enhancing the annual job fair at Karlstad University. By addressing the unique challenges faced by students, companies, and the Hotspot team, the app streamlines the process of connecting students with the right companies, while also reducing the logistical burdens traditionally associated with the event.
+The Hotspot app streamlines the annual job fair at Karlstad University by connecting students with companies and reducing logistical burdens. Despite limited marketing and a small user base, early feedback confirmed its effectiveness. I found the app compelling and continued using it during the event.
 
-Despite limited marketing time and a modest initial user base, early anecdotal feedback has confirmed the app’s effectiveness. Students appreciated its intuitive design and quick access to essential information during the tight 5.5-hour event. Personally, I found the app so compelling that I continued using it, a testament to the thoughtful design and purposeful functionality behind it.
+Developed from scratch, the project showcased 
 
 Developed from scratch using an agile approach, the project showcased careful planning, strategic technology choices, and close collaboration between us developers and the team members. This process not only met immediate needs but also laid the groundwork for future enhancements.
 
