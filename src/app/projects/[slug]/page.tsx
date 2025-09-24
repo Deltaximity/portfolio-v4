@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import Sidebar from '@/components/Sidebar';
+import * as motion from "motion/react-client";
 
 // Fix this inefficient code
 function extractHeadings(markdown: string) {
@@ -47,9 +48,24 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     return (
         <>
         <header className='blog-header'>
+            <motion.div
+                    className="mask"
+                    initial={{ y: 0 }}
+                    animate={{ y: '100%' }}
+                    transition={{ duration: .9, ease: [0.9, 0, 0.2, 1] }}
+                ></motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: '-100%' }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: .9, ease: [0.9, 0, 0.2, 1] }}
+                ></motion.div>
             <h1 className="h1">{post.metadata.title}</h1>
         </header>
-        <article>
+        <motion.article
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: .2, delay: .5, ease: 'easeOut' }}
+        >
             <Sidebar headings={headings} />
             <div className="post-content" style={{ position: "relative" }}>
                 <ReactMarkdown
@@ -76,7 +92,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     }}
                 >{post.content}</ReactMarkdown>
             </div>
-        </article>
+        </motion.article>
         </>
     );
 }

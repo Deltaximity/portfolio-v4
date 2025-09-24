@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import Link from "next/link";
 import Image from "next/image";
 import { CircleCheck } from 'lucide-react';
+import * as motion from "motion/react-client";
 
 interface PostMetadata {
     slug: string;
@@ -13,18 +14,33 @@ interface PostMetadata {
     description: string;
     image?: string;
     alt?: string;
-}  
+}
+
+const list = {
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "easeOut", staggerChildren: 0.1 } },
+    hidden: { opacity: 0, y: 12 },
+}
+
+const item = {
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+    hidden: { opacity: 0, y: 12 },
+}
 
 export default function BlogPage() {
     const posts = getPostMetadata();
 
     return (
         <div>
-            <section className="blogs-list">
+            <motion.section 
+                className="blogs-list"
+                initial="hidden"
+                animate="visible"
+                variants={list}
+            >
                 <h1 className="h1">All Projects</h1>
                 <ul className="cards">
                     {posts.map((post) => (
-                        <li key={post.slug} className="card">
+                        <motion.li key={post.slug} className="card" variants={item}>
                             <Link href={`/projects/${post.slug}`}>
                                 <div className="image-container">
                                     <Image 
@@ -41,14 +57,14 @@ export default function BlogPage() {
                                     <p>{post.description}</p>
                                 </div>
                             </Link>
-                        </li>
+                        </motion.li>
                     ))}
-                    <li className="card demo">
+                    <motion.li className="card demo" variants={item}>
                         <CircleCheck size={50} strokeWidth={1} />
                         <p>More projects and case studies coming soon...</p>
-                    </li>
+                    </motion.li>
                 </ul>
-            </section>
+            </motion.section>
         </div>
     )
 }
