@@ -66,7 +66,7 @@
         flex-wrap: wrap;
 
         a {
-            min-width: 200px;
+            min-width: 150px;
             height: 200px;
             background-color: $color-secondary;
             border-radius: $radius-big;
@@ -223,6 +223,15 @@ section h2 {
 
             .image-container {
                 min-width: 100%;
+            }
+        }
+    }
+
+    .socials-section {
+        .container {
+            a {
+                min-width: 120px;
+                height: 120px;
             }
         }
     }
