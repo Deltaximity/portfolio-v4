@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Github, Linkedin, Mail } from "lucide-react";
 import SayHello from "@/components/SayHello";
+import GetInTouch from "@/components/GetInTouch";
 
 export const metadata = {
     title: 'Contact',
@@ -19,6 +20,7 @@ export default function Contact() {
             <header className="blog-header">
                 <h1>Contact</h1>
             </header>
+            <GetInTouch />
             <section className="socials-section">
                 <h2>Socials</h2>
                 <div className="container">
