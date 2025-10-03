@@ -7,7 +7,7 @@ export default function SayHello() {
     <section className="say-hello-section">
       <h2>Say Hello</h2>
       <div className="image-container">
-        <p className="h3">Hasan</p>
+        <p className="h3">Embrace</p>
         <Image 
           src="/assets/img/DSC00402.jpg"
           alt="Leaves"
@@ -15,10 +15,10 @@ export default function SayHello() {
           sizes="100vw"
           style={{ objectFit: "cover" }}
           />
-        <p className="h3">Ali</p>
+        <p className="h3">Growth</p>
       </div>
       <Link href="mailto:hello@deltaximity.com" className="primary-button"><Mail size={20} />hello@deltaximity.com</Link>
-      <p>Let's create something <strong>impactful</strong> together.</p>
+      <p>I usually reply within <strong>a day</strong>.</p>
     </section>
   )
 }
