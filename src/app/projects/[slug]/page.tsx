@@ -85,7 +85,7 @@ const components: MDXComponents = {
 
 // Fix this inefficient code
 function extractHeadings(markdown: string) {
-    const regex = /^(#{1,6})\s+(.*)$/gm;
+    const regex = /^(#{1,2})\s+(.*)$/gm;
     const headings = [];
 
     let match;

@@ -6,228 +6,401 @@ description: "A PWA app that annually helps over 8000 students connect with empl
 category: "Case Study, Project"
 date: "2024"
 ---
+# Summary
 
-Hotspot App is a Progressive Web App (PWA) built with **React**, **Express** and **SCSS** to transform the annual job fair experience at Karlstad University. With over 8,000 students and 130 companies participating a 5.5-hour event, traditional maps and fragmented information were inefficient. I co-developed a digital solution that consolidates essential details into one intuitive platform, helping students find suitable employers. This case study details my journey through the design, development, and testing, highlighting problem-solving challenges, and lessons learned.
-
-<Toggle title="Test">
-Some content here
-</Toggle>
-
-<Columns>
-  <Column>
-    ## Left
-
-    - Text
-    - test
-  </Column>
-  <Column>
-    ## Right
-  </Column>
-</Columns>
-
-```javascript
-let x = 1;
-```
-
+Hotspot App is a Progressive Web App (PWA) built with React, Express and SCSS for Karlstad University’s annual job fair. I developed a digital solution that consolidates essential details into one intuitive platform, helping students find suitable employers. This case study details my journey through the development, challenges, and lessons learned.
 
 # Background
 
-[Hotspot](https://hotspot.kau.se/) is an organization that hosts Sweden's largest annual job fair at [Karlstad University](https://www.kau.se/en). Founded by students in 1998, the event has consistently attracted over 130 companies and sees more than 8000 student visitors each year.
+[Hotspot](https://hotspot.kau.se/) is an organization that hosts Sweden's largest annual job fair at [Karlstad University](https://www.kau.se/en) (KAU). Founded by students in 1998, this 5.5-hour event has consistently attracted over 130 companies and more than 8000 student visitors each year. During my studies, I joined the Hotspot team in 2023-2024, to build the team’s first ever app development project in 70 days. This digital solution is to support matching of students and companies at the job fair.
 
-As Hotspot grew in popularity, they were faced with new challenges: Students found it difficult to navigate the event, struggling with confusing maps and a lack of company information they had to look up themselves. Companies voiced concerns about their booth visibility, as those farther from the event's center received less attention. The Hotspot team faced increasing logistical strain, from handling event planning to addressing unauthorized acces by non-university students.
+## Understanding The Problem
 
-To summarize, we see clear problems from three sides:
+The existing experience relied on disconnected resources to connect students with companies. The team had to distribute physical badges and printed maps through the information desk, which many participants missed, and an online catalogue that was difficult to discover and cumbersome to browse. The student-led organizing team found it challenging to manage operational workload during the event, and balance event planning alongside their studies.
+
+Students encountered these two challenges: they lacked an accessible way to discover relevant companies, and navigating between resources during the fair made it difficult to plan where to go. Companies, especially those further from the main venue, struggled with visibility and reaching suitable students. With over 130 companies competing for students’ limited time, students needed a way to quickly assess relevance and prioritize where to go. 
+
 <table>
-<thead>
-<tr>
-<th>test</th>
-<th>test</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Test</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Students</th>
+      <th>Companies</th>
+      <th>Hotspot Team</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Difficulty finding relevant companies within the limited time frame</td>
+      <td>Difficulty attracting the right students within the limited time frame</td>
+      <td>Balancing studies and operational workload of the event</td>
+    </tr>
+  </tbody>
 </table>
-| Hotspot | Students | Companies |
-|---------|----------|-----------|
-| Resource-intensive logistics | Confusing navigation with printed maps | Booths in less visible areas recieved fewer visitors |
-| Unauthorized students attending | Lack of company information | Struggled to attract the right students |
+Summary of the pain points
 
-To address these concerns, Hotspot needed an innovative matchmaking solution that could bridge the gap between students and companies. They invited Karlstad University web dev students to design and develop a digital solution for the event.
+Before development began, we used insights from previous job fairs and an entrepreneurial case study conducted by KAU Business students, to identify key pain points and guide our design and technical decisions. These insights shaped Hotspot around centralizing company information, reducing discovery friction, and supporting faster decision-making.
 
-In 2023, I joined the Hotspot project team during my studies, leading planning and development with a team of three: two developers and one designer.
+## Goal
 
-# Objectives
+The Hotspot team’s goal was to launch an app that improves matching between students and companies for the job fair while reducing operational workload on the team.
 
-The **Hotspot app** aims to solve the challenges faced by students, companies, and the Hotspot team:
-1. Match students with suitable companies.
-1. Ensure companies receive recognition, regardless of booth placement.
-1. Provide a smooth, intuitive event navigation system.
-1. Reduce logistical strain on the Hotspot team.
+By improving these matches, students can connect with companies that better align with their interests, while helping companies reach more relevant candidates and maximize their visibility at the event.
 
-# Understanding User Needs
+## Objectives
 
-Before development began, we focused on **understanding the problem itself**, what students were looking for, what companies had to offer, and how we could bridge the gap effectively. Rather than conducting formal studies, we relied on firsthand experience and available data to identify pain points and inform our technical decisions.
-
-## Challenges
-1. Limited event duration (5.5 hours)
-1. Existing solutions were confusing and inefficient.
-1. A lot of students navigated the event at random.
-
-## Event Offerings
-To understand the range of opportunities available for students, we consolidated what companies offered:
-
-| Industries | Roles |
-|------------|-------|
-| Economics and law | Employment |
-| Healthcare and social work | Trainee |
-| Engineering | Extra job |
-| IT | Thesis work |
-| Teacher training | Summer job |
-| Music, dance and culture | Internship |
-| Social sciences and humanities | Membership |
-
-Addtionally, we looked at other data points such as:
-- Company locations
-- Additional information companies provided
-- Booth location at the event
-
-These points shaped the **core functionality** of the Hotspot app, to directly address the root problems and help students find the right companies.
+1. Streamline company discovery process for students.
+1. Reduce the time it takes to find relevant company information.
+1. Reduce operational workload for the team.
 
 # Design and Development Process
-I planned the app's development, which incorprated some Agile elements, to ensure timely delivery with the intended features and a polished end product.
+I led the Hotspot app’s development alongside one developer and one designer, with frequent pair programming sessions. We worked closely with the event project manager on planning, the marketing team on app publicity, and KAU's IT consultant on Podio API integration and deployment.
 
-## Planning
-During the planning phase, we evaluated frameworks, divided tasks, and differentiated between 'core' vs. 'ideal' features.
-
-> **Core Feature**: Essential functionality for achieving the app’s goals, backed by reasoning and careful consideration.
-
-> **Ideal Feature**: Desirable functionality that enhances the app but was not strictly necessary.
-
-### Project Management Tools
-- `Notion` – Used for tracking progress, meetings, and app development. Also used for documentation for future Hotspot devs.
-- `Podio` – Used for management by the rest of Hotspot team (see how utilized this under *Development* section below).
+Our priority was to ensure that we had a working app two weeks before the event day. We focused on building core features that are essential to achieving the app’s goals, and set milestones to help us stay on track of the deadlines.
 
 <Image
   src="/assets/blog/images/blog-hotspot-notion.png"
-  alt="Screenshot of Notion in Timeline view"
-  title="Screenshot of Notion in Timeline view"
+  alt="Screenshot of Notion project management page"
+  caption="Notion project management page"
 />
 
-### Technology Considerations
-We experimented with various technologies, including Capacitor with Ionic and Expo for React Native (for native-like features on mobile), but ultimately landed on `React` for the frontend and `Express` for the backend.
+- `Github` — Used for version control, and set up standardized procedures for naming, documentation, and code practices.
+- `Notion` — Used for tracking progress, meetings, app development, and documentation for future Hotspot Devs.
+- `Podio` — Used for integration and management by the rest of Hotspot team
 
-Our decision was based on:
+## Research and Development
+We began with three product discovery workshops where we aligned the app’s goals and scope, defined features and drew concept sketches. The designer focused on research and prototyping, while the developer (Dev) team explored technical options and selected the app framework. After finalizing the designs, we developed and tested the prototype with the Hotspot team before deploying the app.
 
-- **Ease of use** – Developer-friendly framework.
-- **Learning curve** – Minimal learning curve for quicker development.
-- **Maintainability** – Easily maintainable for future developers.
-- **Modularity** – Modular and expandable, having both scalabilty and flexibility in mind.
-- **Device support** – Consistent performance and predictable behavior across iOS, Android, and other devices.
-- **Resource usage** – Efficient in battery, bandwidth, and overall performance.
-
-## Design
-The visual design was created by our UI/UX designer through brainstorming workshops with the dev team. The user interface revised and prototyped with the Hotspot team before landing on the final design.
-
-<Image
-  src="/assets/blog/images/blog-hotspot-prototypes.jpeg"
-  alt="Four mockup interfaces showcasing the Hotspot app"
-  title="Final revisions of the app design proposed by our designer."
+<Image 
+  src="/assets/blog/images/blog-hotspot-wireframe-sketch.png"
+  alt="Workshop wireframe sketch"
+  caption="Workshop wireframe sketch"
 />
 
-## Development
-We held several workshops with our designer to finalize the design and ensure it was achievable in code. We used `Github` for version control, and set up standardized procedures for naming, documentation, and code practices.
+## UI/UX Design
+<Columns>
+  <Column>
+    <Image 
+      src="/assets/blog/images/blog-hotspot-prototypes.jpeg"
+      alt="Final mockups proposed by our designer"
+      caption="Final design proposed by our designer"
+    />
+  </Column>
+  <Column>
+    Technical feasibility was validated alongside our designer, with Hotspot team’s feedback shaping the final design.
+  </Column>
+</Columns>
+
+## Technology Considerations
+We experimented with various technologies, including `Capacitor` with `Ionic` and `Expo` for React Native (for native-like features on mobile), but ultimately landed on the tech stack below.
 
 ### Tech Stack
-- `React` - For frontend. Chosen for its flexibility and future-proofing of the app. We were already familiar with React so it was easier to get started.
-- `Express` - For backend and server side of things. Managing data retrieval from external sources (like Podio), caching images, and serving data to the frontend.
-- `Podio API` - We integrated Podio into our backend server for easy access to company data to be displayed in the app, while still maintaining the same workflow for other team members when updating this data.
-- `JSON` - Used as a local database to consolidate data from different sources into one accessible format, generated at build time by the backend, with scheduled updates to receive the latest data.
-- `SCSS` - For easier development and maintainance of design code in the future, enabling us to implement our own design system which we used across the entire app.
 
-### Challenges Faced
-1. **JavaScript Stability:** The dynamic nature of JavaScript led to unexpected bugs. We had to explicitly set data types and closely trace the data lifecycle to resolve these issues.
-1. **File Access:** We encountered difficulties accessing backend files (images) from the frontend during JSON updates.
+<Toggle title="React — Front-end">
+  Chosen for its flexibility and future-proofing of the app. Easier to get started due to familiarity.
+</Toggle>
+<Toggle title="Express — Back-end and server-side">
+  Chosen for its simplicity and lightweight architecture to quickly integrate with Podio API and run scheduled updates.
+</Toggle>
+<Toggle title="Podio API — Project management API integration">
+  For syncing company data while preserving the Hotspot team's existing workflow.
+</Toggle>
+<Toggle title="JSON — Local database">
+  For consolidating data from multiple sources into a single local database with scheduled updates.
+</Toggle>
+<Toggle title="SCSS — Styling & design system">
+  For easier development and maintenance of design code in the future, enabling us to implement our own design system which we used across the entire app.
+</Toggle>
 
-## Testing
-We set an initial deadline for the app to reach a state ready for testing. Early tests within the Hotspot team revealed several issues:
-- **UX Problems:** Some team members experienced unresponsive interactivity and navigation issues. Particularly with search and filtering functionality on iOS devices.
-- **Crashes:** For some team members, the "Favorites" pages caused a complete app crash, which was a critical red flag.
+### Our decisions were based on these criteria:
+| # | **Criteria** | Explanation |
+| --- | --- | --- |
+| 1 | **Ease of use** | Developer-friendly framework |
+| 2 | **Learning curve** | Minimal learning curve for quicker development |
+| 3 | **Maintainability** | Easily maintainable for future developers |
+| 4 | **Modularity** | Modular and expandable, having both scalabilty and flexibility in mind |
+| 5 | **Resource usage** | Efficient in battery, bandwidth, and overall performance |
+| 6 | **Device support** | Consistent performance and predictable behavior across iOS, Android, and other devices |
 
-We took note of all the bugs encountered and told the team to write "mini bug reports" that included: 
-1. The device and browser used.
-1. Steps to reproduce the bug.
-1. Screenshots and additional context.
+## Building the Solution
 
-With a **1-week** window to fix these issues, we managed to address minor bugs immediately and conducted further investigations on more significant problems—particularly a persistent issue with company logos not displaying on the frontend.
+### Understanding Key Data Points
+To understand the range of opportunities available for students, we consolidated what companies offered:
+<Columns>
+  <Column>
+    #### Types of Industries
+    - Economics and law
+    - Healthcare & Social Work
+    - Engineering
+    - IT
+    - Teacher Training
+    - Music, Dance & Culture
+    - Social Science & Humanities
+  </Column>
+  <Column>
+    #### Types of Roles
+    - Employment
+    - Trainee
+    - Extra Job
+    - Thesis Work
+    - Summer Job
+    - Internship
+    - Membership
+  </Column>
+</Columns>
 
-## Launch
-After resolving most of the bugs, we launched the app on schedule. With assistance from an IT consultant, we deployed the app on our university servers. The marketing team then had approximately **1 week** to promote the app and attract users.
+Other important data points include:
+- Company addresses
+- Event booth locations
+- Additional information companies provided
 
-*Note: We had plans to set up usage statistics trackers for further user research but didn't have time to implement this feature.*
+These points shaped the core functionality of the Hotspot app, to directly address the root problems and help students find the right companies.
 
-# Key Features and Functionality
-The Hotspot app is packed with features designed to streamline the job fair experience for both students and companies.
+> <Toggle title="Core Features: Essential functionality required to achieve the app's goals."><ul><li>Display list of companies</li><li>Detailed view of company information</li><li>Search company information</li><li>Filter company information</li><li>Save companies in a Favorites list</li><li>Local user profile (for personalized recommendations)</li></ul></Toggle>
 
-## Quick and Easy Access
-The app is PWA and engineered for immediate use. Its responsive and efficient design ensures that students can quickly open the app and access event information without delay, a crucial benefit during the fast-paced 5.5-hour job fair. Launch it from any browser on various operating systems or save it to your homepage for quicker access.
+> <Toggle title="Ideal Features: Desirable functionality that enhances the app but not strictly necessary."><ul><li>Sort company information</li><li>Cloud student and company profiles (requires database)</li><li>Log in and authentication (requires database)</li><li>Single Sign-On (SSO) for university students</li><li>Push Notifications</li><li>UI animations and micro-interactions</li><li>Mobile-native modals and popups</li><li>Option to download on App Store or Play Store</li><li>Google Analytics</li></ul></Toggle>
 
-## Onboarding and Recommendations
+## Key Features and Functionality
+The Hotspot app offers features designed to streamline the job fair experience for both students and companies.
+
+### Instant Access — Anywhere
+
+<Image
+  src="/assets/blog/images/blog-hotspot-pwa.jpg"
+  alt="Mockup of iPhone showcasing Hotspot app PWA installation prompt"
+/>
+
+Built as a PWA, Hotspot provides instant access with no installation. Users can launch it from any device with a modern browser or save it to their home screen for quick access, making it convenient to find event information throughout the 5.5-hour career fair.
+
+<Toggle title="How we let users save the app to their home screen">
+```JSON
+// manifest.json
+{
+  "short_name": "Hotspot",
+  "name": "Hotspot Jobbmässan",
+  "icons": [{
+    "src": "HotspotAppLogo_64.png",
+    "sizes": "64x64 32x32 24x24 16x16",
+    "type": "image/x-icon"
+    }, {...}, {...}],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
+```
+</Toggle>
+
+### Find Anything — Instantly
+
+<Image
+  src="/assets/blog/images/blog-hotspot-search.png"
+  alt="Mockup of iPhone showcasing search bar and filter button"
+  caption="Search bar and filter for company information"
+/>
+
+Search across company *names*, *descriptions*, *tags*, and *booth IDs* with **results updating in real time as users type**. Combine this with filters for `industry` and `role`, plus multiple sorting options, to quickly find relevant companies.
+
+<Toggle title="How we implemented Search">
+Company data was indexed locally for full-text search. React's `useEffect` hook filters cached data on each input change, providing instant search results.
+
+```Javascript
+ useEffect(() => {
+  if (query === '') {
+    setSearchData(filteredData);
+  } else {
+      const searchResult = filteredData.filter(item => {
+      const values = Object.values(item);
+      for (let i = 0; i < values.length-1; i++) {
+        if (values[i].toLowerCase().includes(query.toLowerCase())) {
+          return true;
+        }
+      }
+      return false;
+    });
+    setSearchData(searchResult);
+  }
+}, [query, data, filteredData]);
+```
+</Toggle>
+<Toggle title="How we implemented Filters">
+Predefined company categories were converted into selectable tags. React state management handles user selections, allowing multiple filters to be applied simultaneously.
+
+```Javascript
+const updateFilter = (Roles = [], Industries = []) => {
+  const roleTags = roles.map(tag => tag.toLowerCase());
+  const industryTags = industries.map(tag => tag.toLowerCase());
+  setFilterQuery([roleTags, industryTags]);
+};
+```
+</Toggle>
+<Toggle title="How we integrated with Podio API">
+Our Express back-end uses Axios to integrate with Podio API and run scheduled jobs using scheduleJob() to keep data up to date. Our IT consultant opened a Podio API endpoint to help us connect the app.
+
+```Javascript
+axios
+  .post(authenticationURL, authenticationBody, authenticationHeader)
+  .then((response) => { accessToken = response.data.access_token; })
+  .catch((error) => { console.log(error); }
+);
+	
+async function fetchDataAndSave() {
+  const url = "...";
+  try {
+    const response = await axios.get(url);
+    const data = response.data;
+		
+    fs.writeFile(...);
+  } catch (error) {
+    ...
+  }
+}
+```
+
+```Javascript
+schedule.scheduleJob("0 3 * * *", fetchDataAndSave);
+```
+</Toggle>
+
+### Recommendations — Personalized
 <Image
   src="/assets/blog/images/blog-hotspot-onboarding.png"
   alt="Mockup of iPhone showcasing Hotspot app onboarding page"
+  caption="Onboarding flow and recommendations"
 />
 
-Upon launching the app, students are guided through an onboarding process that helps them get started quickly. This process not only introduces key features but also offers tailored recommendations, ensuring that students are directed toward companies that match their interests from the outset.
+A streamlined onboarding flow captures users' interests, creating a local profile to personalize company recommendations, making it easier for students to discover relevant employers and for companies to reach the right audience.
 
-## Information at a Glance
+<Toggle title="How we implemented Recommendations">
+The user’s selected preferences formed a local profile, turning existing Filter logic into a more personalised discovery experience.
+
+```Javascript
+const industryMatch = isIndustryFilterActive
+  ? industries.some(tag => profileData.industries.includes(tag))
+  : false;
+
+const roleMatch = isRoleFilterActive
+  ? roles.some(tag => profileData.roles.includes(tag))
+  : false;
+
+if (isIndustryFilterActive && isRoleFilterActive) {
+  return industryMatch && roleMatch;
+} else if (isIndustryFilterActive) {
+  return industryMatch;
+} else if (isRoleFilterActive) {
+  return serviceMatch;
+}
+```
+</Toggle>
+
+### Information at a Glance
 <Image
   src="/assets/blog/images/blog-hotspot-card.png"
   alt="Hotspot app showcasing a company card with arrows and labels (company, description, tags, favorite"
 />
 
-The app presents company information in a concise, glanceable format. Key details such as *company name, description, tags*, and an option to *favorite* allow students to quickly determine which companies align with their interests. This is especially important during the event, where students have only **5.5 hours** to navigate through **130 company booths**. Given that interactions at each booth can last anywhere from **15 minutes to 1 hour**, quick access to essential details is critical.
+Company cards consolidate essential information into a concise, glanceable format, helping students quickly browse and prioritize across over 130 companies, arrive prepared, and focus conversations on opportunities rather than introductions.
 
-## Ability to Favorite Companies
+### Favorites — In One Place
 <Image
   src="/assets/blog/images/blog-hotspot-favorite.png"
   alt="Mockup of iPhone showcasing company card favorite button"
 />
 
-Students can save companies in a `Favorites` list and view them at any time. The `Favorites` list has the same advanced searching and filtering options as the main page, and the student can search, sort and filter as they like within this list. The student then can click on the card to reveal more information about the company.
+Students can save companies into a personal `Favorites` list and revisit them any time. The list retains the same search and filtering capabilities as the main directory, allowing students to refine their selections while planning their career fair experience.
 
-This is helpful when students want to do research about the companies prior to the main event day.
+<Toggle title="How we implemented Favorites">
+```Javascript
+const [favorites, setFavorites] = useState(() => {
+  const savedFavorites = localStorage.getItem('favorites');
+  return savedFavorites ? JSON.parse(savedFavorites) : [];
+});
 
-## Advanced Search, Sort and Filtering Options
+const addToFavorites = (item) => {
+  setFavorites((prevFavorites) => {
+    // Check for duplicates
+    if (prevFavorites.some(fav => fav.Boothid === item.Boothid)) {
+      return prevFavorites.filter(fav => fav.Boothid !== item.Boothid);
+    } else {
+      return [...prevFavorites, item];
+    }
+  });
+}
+```
+</Toggle>
+
+## Testing
+We set an initial deadline for the app to be ready for testing. Early tests within the Hotspot team revealed a few issues. The team was asked to submit bug reports including:
+1. The device and browser used.
+1. Steps to reproduce the bug.
+1. Screenshots and additional context.
+
+Summary of the bugs:
+| Bug | Affected Users | User Impact | Priority |
+| --- | --- | --- | --- |
+| Unresponsive search input on iOS devices. | All iOS users | High | High |
+| Viewing Favorites tab caused the page to crash | 2 | Medium | High |
+| Users could scroll the main page even when the company modal was open | All users | Low | Low |
+
+As launch approached, we balanced bug fixing with production readiness. We resolved outstanding bugs and investigated the crash affecting the Favorites page. Unable to reproduce it, we suspected it was caused by a memory leak. Given the approaching launch and competing priorities, we implemented a temporary workaround by prompting users to reload the page, and documented the issue for future investigation.
+
+## Launch
+We launched the application on schedule. KAU’s IT consultant assisted us in deploying the application, as we do not have access to internal servers.
+
+## Challenges
+As the pioneering Dev team, we worked without prior documentation or technical handover, a technical manager, and with one developer temporarily unavailable. With limited resources and a fixed event deadline, we prioritized simple, reliable solutions that met core requirements, making deliberate trade-offs essential to launching the app successfully.
+
+### Technical Challenges
+1. **JavaScript Stability:** JavaScript’s dynamic nature caused unexpected bugs. We addressed these by explicitly defining data types and tracing the data lifecycle.
+1. **API Rate Limits:** Frequent server requests could have resulted in thousands of API calls. We reduced this by having the backend handle server communication and serve data to the frontend through a single request.
+1. **Frontend-Backend Communication:** Mismatched file paths prevented the frontend from accessing backend files. We resolved this by correctly configuring the paths.
+1. **App Launch:** As our first real-world project, launching the app introduced challenges beyond development. We familiarized ourselves with production code, configure the app, and ensured stability for deployment.
+
+# Outcome
+The Hotspot team gathered qualitative feedback through participant surveys. Students were asked *"This year we launched the 'Hotspot app', did you use it?"* and *"How did you find the app?".* I translated the Swedish responses to English, analyzed the data using cluster analysis to identify key themes, and presented them as word clouds below.
+
+The app received an overall adoption rate of 20% according to the survey data, where 75% reported positive experience using the app. Highlighted responses include:
+
+> "It was easy to use the app and find information about the exhibitors."
+
+> "Good that you could see which areas the different exhibitors were targeting and where they were at the fair."
+
 <Image
-  src="/assets/blog/images/blog-hotspot-search.png"
-  alt="Mockup of iPhone showcasing search bar and filter button"
+  src="/assets/blog/images/blog-hotspot-wordcloud-positive.png"
+  alt="Word cloud of positive feedback"
+  caption="Word cloud of positive feedback"
 />
 
-To further enhance usability, the app provides advanced options for searching, sorting, and filtering company listings. Students have the option to; filter by `industy` and/or `role`, sort in `alphabetical`, `reverse-alphabetical` or `recommended` order, or **search specific keywords**. These tools empower students to tailor their exploration based on specific criteria, ensuring they can quickly identify opportunities that best fit their career interests.
+The gathered sentiments also surfaced these areas for improvement: students hoped to have more filtering options and personalized recommendations, and an easily accessible map.
 
-# Results
-While we didn’t conduct a formal empirical study, and the marketing team had limited time to attract a large user base, the early anecdotal feedback has been overwhelmingly positive.
+<Image
+  src="/assets/blog/images/blog-hotspot-wordcloud-negative.png"
+  alt="Word cloud of improvement feedback"
+  caption="Word cloud of improvement feedback"
+/>
 
-Despite the limited data, both students and team members have found the app incredibly useful. The seamless UX and glanceable company details made navigating the event much easier. The app’s advanced search and filtering features was particularly helpful in quickly finding the companies students were looking for, regardless of booth placement.
+Company data was not available for this analysis, so their experience could not be assessed.
 
-On a personal note, I found the app so effective and intuitive that I kept coming back to it. Its seamless functionality truly underscored the purpose it was designed to serve.
-
-## Room for Future Enhancements
-While the feedback was positive and there was no stability issues, we faced a major problem with updating images in the frontend. Due to limited time for testing and marketing, the app couldn't reach a large enough user base. This is the first iteration, and there will be more future updates. These experiences have provided valuable insights for me and future vision of Hotspot.
+The app provided a digital alternative for accessing event map and information intended to support event operations and reduce the team’s reliance on physical materials. However, as part of the transition, the team continued using printed maps alongside the app during the event. While the app was perceived as helpful, its impact on operational workload could not be clearly determined in this iteration.
 
 # Conclusion
-The Hotspot app streamlines the annual job fair at Karlstad University by connecting students with companies and reducing logistical burdens. Despite limited marketing and a small user base, early feedback confirmed its effectiveness. I found the app compelling and continued using it during the event.
+## Key Insights
+### 1. Limited User Reach and Discoverability Challenges
+The app had limited reach, with only 20% of surveyed students reporting that they had used it. Among users, more than half of the negative feedback related to access rather than functionality: students had difficulty finding the app, were unaware of its existence, or assumed it required installation, despite it being accessible directly through a web browser. These findings suggest that discoverability and communication may have been barriers to adoption among those who encountered the app. However, as the data was only collected from students who used the app, the reasons why the remaining students did not adopt it cannot be determined. Further research could therefore involve observing and interviewing non-users to understand how they navigate and experience the career fair, and whether the app could better support their needs.
 
-Developed from scratch, the project showcased 
+### 2. Demand for Greater Personalization and Seamless Navigation
+Around 10% of students expressed interest in more filtering options, better personalized recommendations, and an easily accessible event map. Although the specific filtering preferences were not captured, this feedback suggests opportunity for further improvements. More advanced filters were not implemented during the project due to the need for additional data cleaning within the limited development time frame. Similarly, the recommendation feature relied on locally created user profiles with minimal user information, which may explain why one student felt that the recommendations did not reflect their interests. For navigation, providing booth locations and a link to the event map was insufficient to fully support students in navigating the event, highlighting the value of integrating the map directly into the app. These limitations may have contributed to one student’s perception that the app felt “clunky.” To address these issues, the team should improve company data collection and standardize data inputs to support the development of additional filters. Allowing users to create richer personal profiles and refining recommendations based on their usage behavior could also improve recommendation accuracy. Finally, integrating the event map directly into the app, with clearly marked booth locations, would improve the overall UX and help students navigate the event more easily.
 
-Developed from scratch using an agile approach, the project showcased careful planning, strategic technology choices, and close collaboration between us developers and the team members. This process not only met immediate needs but also laid the groundwork for future enhancements.
+### 3. Students Found The App Useful
+Among users, 75% reported a positive experience with the app. Respondents frequently described it as easy to use and appreciated having exhibitor information available in a single place. Students particularly valued the app’s core functionalities, including its clear presentation of information, filtering options, and favorites list. Several students also noted that the app helped them identify relevant companies and access information more easily during the event. This suggests that the app’s core features provided practical value to students and contributed to the overall positive experience. To achieve higher satisfaction, the app should maintain its intuitive experience while continuing to improve and expand its existing functionality, in addition to addressing the pain points identified by event participants. This would help ensure that the app consistently supports their needs throughout the event.
 
-In summary, the Hotspot app stands as a successful example of how targeted digital innovation can transform traditional events, delivering meaningful improvements for students, companies, and event organizers alike.
+## Reflection
+I am grateful to be part of this extraordinary and significant learning experience. Building my first real-world app from scratch has helped me gain a new understanding of what helps a Dev team deliver a project within its constraints.
 
-# Parting Words
-This project has been more than just a technical challenge, it’s been a journey of learning, problem-solving, and personal growth. Building the Hotspot app allowed me to dive deep into real-world issues and explore how digital solutions can make a tangible difference, even within the tight constraints of an annual event. I hope this case study offers you a window into my thought process and the creative decisions that guided this project.
+One area I would have handled differently was seeking additional support earlier. To avoid placing additional demands on the team, I focused on what we could realistically deliver and turned down some additional feature ideas. In hindsight, I could have engaged my manager earlier on how best to leverage the consultant’s expertise to support our team’s capacity constraints. This may have allowed us to be more ambitious in the scope of features we explored, while learning more from his experience.
 
-**Thank you** for joining me on this journey. I look forward to future challenges and opportunities, hope our paths cross again in the world of tech. Until then, happy coding!
+One of my biggest takeaways was learning how to maintain project momentum amid unexpected challenges. When the other developer had to go on extended leave, I stepped up and took on responsibilities beyond my role. Documenting our project on Notion proved particularly valuable in maintaining continuity during the transition. This experience showed me how documentation can help us adapt to change, and taught me when to take initiative, and ask for support.
+
+## Closing Thoughts
+I deeply appreciate everyone who contributed to this ambitious student-led project and supported my growth as both a person and a developer.
+
+Thank you for taking the time to read my case study. I look forward to carrying these lessons into future projects and continuing to grow.
