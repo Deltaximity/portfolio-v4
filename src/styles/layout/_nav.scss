@@ -112,8 +112,9 @@ nav[aria-label="breadcrumbs"] {
                 color: $color-text;
                 margin: 0;
                 border: none;
-                padding: 0;
-                font-size: $fontsize-h2;
+                font-size: calc($fontsize-h2 + 1rem);
+                text-align: left;
+                padding: 12px 26px;
 
                 &:hover {
                     color: $color-bg;

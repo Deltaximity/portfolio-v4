@@ -21,7 +21,7 @@ const postsDirectory = path.join(process.cwd(), 'src', 'data', 'content');
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {
   try {
-    const filePath = path.join(postsDirectory, `${slug}.md`);
+    const filePath = path.join(postsDirectory, `${slug}.mdx`);
     const fileContents = await fs.readFile(filePath, 'utf8');
     const { data, content } = matter(fileContents);
     return {
@@ -44,7 +44,7 @@ export async function getPostMetadata(): Promise<({ slug: string } & PostMetadat
       const fileContents = await fs.readFile(filePath, 'utf8');
       const { data } = matter(fileContents);
       return {
-        slug: filename.replace('.md', ''),
+        slug: filename.replace('.mdx', ''),
         ...data,
       } as { slug: string } & PostMetadata;
     })

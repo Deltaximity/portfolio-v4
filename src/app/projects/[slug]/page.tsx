@@ -1,11 +1,87 @@
 import { notFound } from 'next/navigation';
 import { getPostBySlug, getPostMetadata } from '@/lib/posts';
-import Image from 'next/image';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import rehypeHighlight from 'rehype-highlight';
+import { MDXRemote } from "next-mdx-remote/rsc";
+import Image from "@/components/mdx/Image";
+import Toggle from "@/components/mdx/Toggle";
+import Columns from "@/components/mdx/Columns";
+import Column from "@/components/mdx/Column";
 import Sidebar from '@/components/Sidebar';
 import * as motion from "motion/react-client";
+import slugify from '@/lib/slugify';
+import type { MDXComponents } from "mdx/types";
+import type { ComponentPropsWithoutRef } from "react";
+import remarkGfm from "remark-gfm";
+import rehypeHighlight from "rehype-highlight";
+import { mdxCompile } from 'next/dist/build/swc/generated-native';
+
+const components: MDXComponents = {
+  h1: ({ children, ...props }: ComponentPropsWithoutRef<"h1">) => (
+    <h2 {...props} id={slugify(String(children))} className="h2">
+      {children}
+    </h2>
+  ),
+
+  h2: ({ children, ...props }: ComponentPropsWithoutRef<"h2">) => (
+    <h3 {...props} id={slugify(String(children))} className="h3">
+      {children}
+    </h3>
+  ),
+
+  h3: ({ children, ...props }: ComponentPropsWithoutRef<"h3">) => (
+    <h4 {...props} id={slugify(String(children))} className="h4">
+      {children}
+    </h4>
+  ),
+
+  code: ({ className, ...props }: ComponentPropsWithoutRef<"code">) => (
+    <code
+      {...props}
+      className={`inline-code ${className ?? ""}`}
+    />
+  ),
+
+  pre: ({ className, ...props }: ComponentPropsWithoutRef<"pre">) => (
+    <pre
+      {...props}
+      className={`code-block ${className ?? ""}`}
+    />
+  ),
+
+  table: (props: ComponentPropsWithoutRef<"table">) => (
+    <div className="table-wrapper">
+      <table
+        {...props}
+        className="markdown-table"
+      />
+    </div>
+  ),
+
+  thead: ({ className, ...props }: ComponentPropsWithoutRef<"thead">) => (
+    <thead
+      {...props}
+      className={`table-head ${className ?? ""}`}
+    />
+  ),
+
+  th: ({ className, ...props }: ComponentPropsWithoutRef<"th">) => (
+    <th
+      {...props}
+      className={`table-header ${className ?? ""}`}
+    />
+  ),
+
+  td: ({ className, ...props }: ComponentPropsWithoutRef<"td">) => (
+    <td
+      {...props}
+      className={`table-cell ${className ?? ""}`}
+    />
+  ),
+
+  Image,
+  Toggle,
+  Columns,
+  Column,
+};
 
 // Fix this inefficient code
 function extractHeadings(markdown: string) {
@@ -16,8 +92,7 @@ function extractHeadings(markdown: string) {
     while ((match = regex.exec(markdown)) !== null) {
         const level = match[1].length;
         const text = match[2];
-        const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-        headings.push({ id, text, level });
+        headings.push({ id: slugify(text), text, level });
     }
     return headings;
 }
@@ -68,29 +143,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         >
             <Sidebar headings={headings} />
             <div className="post-content" style={{ position: "relative" }}>
-                <ReactMarkdown
-                    remarkPlugins={[remarkGfm]}
-                    rehypePlugins={[rehypeHighlight]}
-                    components={{
-                    h1: (props) => (<h2 className='h2' id={props.children?.toString().toLowerCase().replace(/[^a-z0-9]+/g, '-')} {...props} />),
-                    h2: (props) => (<h3 className='h3' id={props.children?.toString().toLowerCase().replace(/[^a-z0-9]+/g, '-')} {...props} />),
-                    h3: (props) => (<h4 className='h4' id={props.children?.toString().toLowerCase().replace(/[^a-z0-9]+/g, '-')} {...props} />),
-                    code: (props) => (<code className='inline-code' {...props} />),
-                    pre: (props) => (<pre className='code-block' {...props} />),
-                    img: (props) => (
-                        <span className='post-image'>
-                        <Image
-                            src={props.src || ''}
-                            alt={props.alt || 'Markdown image'}
-                            height={0}
-                            width={0}
-                            sizes="(max-width: 600px) 100vw, (max-width: 1024px) 80vw, 60vw"
-                            style={{ objectFit: "cover" }}
-                        />
-                        </span>
-                    ),
+                <MDXRemote
+                    source={post.content}
+                    components={components}
+                    options={{
+                        mdxOptions: {
+                            remarkPlugins: [remarkGfm],
+                            rehypePlugins: [rehypeHighlight],
+                        },
                     }}
-                >{post.content}</ReactMarkdown>
+                    />
             </div>
         </motion.article>
         </>

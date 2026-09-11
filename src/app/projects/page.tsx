@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { CircleCheck } from 'lucide-react';
 import * as motion from "motion/react-client";
+import { getPostMetadata } from '@/lib/posts';
 
 interface PostMetadata {
     slug: string;
@@ -27,8 +28,8 @@ const item = {
     hidden: { opacity: 0, y: 12 },
 }
 
-export default function BlogPage() {
-    const posts = getPostMetadata();
+export default async function BlogPage() {
+    const posts = await getPostMetadata();
 
     return (
         <div>
@@ -68,22 +69,4 @@ export default function BlogPage() {
             </motion.section>
         </div>
     )
-}
-
-function getPostMetadata(): PostMetadata[] {
-    const postsDirectory = path.join(process.cwd(), 'src', 'data', 'content');
-    const filenames = fs.readdirSync(postsDirectory);
-  
-    const posts = filenames.map((filename) => {
-        const filePath = path.join(postsDirectory, filename);
-        const fileContents = fs.readFileSync(filePath, 'utf8');
-        const { data } = matter(fileContents);
-
-        return {
-            slug: filename.replace('.md', ''),
-            ...data,
-        } as PostMetadata;
-    });
-  
-    return posts;
 }

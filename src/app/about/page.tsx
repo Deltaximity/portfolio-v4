@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Camera, KeyboardMusic, Microchip, MonitorCog, Wallpaper } from "lucide-react";
+import StackIcon from "tech-stack-icons";
 import SayHello from "@/components/SayHello";
 import GetInTouch from "@/components/GetInTouch";
 
@@ -49,6 +50,63 @@ export default function About() {
                         <h3>Design</h3>
                         <p>I create visually appealing and user-friendly designs.</p>
                     </div>
+                </div>
+            </section>
+            <section id="tech">
+                <h2>Tech</h2>
+                <div className="container">
+                    <figure className="item" role="img" aria-label="HTML logo">
+                        <StackIcon name="html5" variant="grayscale" />
+                        <p>HTML5</p>
+                    </figure>
+                    <figure className="item" role="img" aria-label="CSS logo">
+                        <StackIcon name="css3" variant="grayscale" />
+                        <p>CSS3</p>
+                    </figure>
+                    <figure className="item" role="img" aria-label="Sass logo">
+                        <StackIcon name="sass" variant="grayscale" />
+                        <p>Sass</p>
+                    </figure>
+                    <figure className="item" role="img" aria-label="JavaScript logo">
+                        <StackIcon name="js" variant="grayscale" />
+                        <p>JavaScript</p>
+                    </figure>
+                    <figure className="item" role="img" aria-label="TypeScript logo">
+                        <StackIcon name="typescript" variant="grayscale" />
+                        <p>TypeScript</p>
+                    </figure>
+                    <figure className="item" role="img" aria-label="React logo">
+                        <StackIcon name="react" variant="grayscale" />
+                        <p>React</p>
+                    </figure>
+                    <figure className="item" role="img" aria-label="Next.js logo">
+                        <StackIcon name="nextjs" variant="grayscale" />
+                        <p>Next.js</p>
+                    </figure>
+                    <figure className="item" role="img" aria-label="Node.js logo">
+                        <StackIcon name="nodejs" variant="grayscale" />
+                        <p>Node.js</p>
+                    </figure>
+                    <figure className="item" role="img" aria-label="Git logo">
+                        <StackIcon name="git" variant="grayscale" />
+                        <p>Git</p>
+                    </figure>
+                    <figure className="item" role="img" aria-label="GitHub logo">
+                        <StackIcon name="github" variant="grayscale" />
+                        <p>GitHub</p>
+                    </figure>
+                    <figure className="item" role="img" aria-label="C# logo">
+                        <StackIcon name="csharp" variant="grayscale" />
+                        <p>C#</p>
+                    </figure>
+                    <figure className="item" role="img" aria-label="Python logo">
+                        <StackIcon name="python" variant="grayscale" />
+                        <p>Python</p>
+                    </figure>
+                    <figure className="item" role="img" aria-label="MySQL logo">
+                        <StackIcon name="mysql" variant="grayscale" />
+                        <p>MySQL</p>
+                    </figure>
                 </div>
             </section>
             <section id="at-work">

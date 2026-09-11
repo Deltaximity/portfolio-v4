@@ -16,9 +16,10 @@
   height: auto;
   width: calc(100% + ($grid-gap*2));
   transform: translateX(-$grid-gap);
+  margin: 0;
 
   img {
-    border-radius: $radius-small;
+    border-radius: $radius-medium;
     width: 100%;
     height: auto;
   }
@@ -30,12 +31,12 @@
   background-color: $color-text;
   border-radius: $radius-small;
   font-size: $fontsize-fineprint;
-  overflow: auto;
+  overflow-x: scroll;
   padding: $grid-gap;
 }
 
 // Inline code styling
-.inline-code {
+:not(.code-block) > .inline-code {
   background-color: $color-bg;
   padding: 2px 4px;
   border: 1px solid $color-gray;
@@ -49,10 +50,6 @@ blockquote {
   margin: 0;
   padding-left: $grid-gap;
   // line-height: 1.5;
-
-  p {
-    // color: $color-gray;
-  }
 
   &::before {
     content: '';
@@ -101,10 +98,58 @@ ul, ol {
   padding-inline-start: 30px;
 }
 
+.markdown-toggle {
+  & summary:hover { cursor: pointer; }
+}
+
+.markdown-columns {
+  display: grid;
+  gap: $grid-gap;
+
+  &.col-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  &.col-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  &.col-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.markdown-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-header {
+  text-align: left;
+  border-bottom: 2px solid #ccc;
+  padding: .75rem;
+}
+
+.table-cell {
+  padding: .75rem;
+  border-bottom: 1px solid #ddd;
+}
+
 @media (max-width: $tablet-landscape) {
   .post-image {
     width: 100%;
     transform: translateX(0);
+  }
+}
+
+@media (max-width: $mobile-landscape) {
+  .markdown-columns {
+    grid-template-columns: 1fr !important;
   }
 }
 
